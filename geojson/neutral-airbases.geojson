@@ -1,0 +1,30 @@
+{
+    "type": "FeatureCollection",
+    "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [15.525190,58.399367]
+            },
+            "properties": {
+                "type": "Malmen airbase, Linkoping, Sweden",                  
+                "template":  "Malmen airbase, Linkoping, Sweden, Headquarter Armd Forces Helicopter Wing."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.289333,63.788488]
+            },
+            "properties": {
+                "type": "Umea airbase, Umea, Sweden",                  
+                "template":  "Umea airbase, Umea, Sweden, Two squadrons of JAS 39 Gripen."
+            }
+        }
+        
+        
+    ]
+}

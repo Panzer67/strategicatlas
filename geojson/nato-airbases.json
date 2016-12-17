@@ -1,0 +1,182 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [19.130795,54.028483]
+            },
+            "properties": {
+                "type": "22nd Tactical airbase, Malbork, Poland",                  
+                "template":  "22nd airbase, Malbork, Poland, 40th aviation squadron, Mig-29."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [21.655512,52.195573]
+            },
+            "properties": {
+                "type": "23rd Tactical airbase, Minsk Mazowiecki, Poland",                  
+                "template":  "23rd airbase, Minsk Mazowiecki, Poland, 1st aviation squadron (MiG-29), 2nd Search and Rescue Group (W-3)."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [16.964271,52.332164]
+            },
+            "properties": {
+                "type": "31st Tactical airbase, Krzesiny airbase Poznan, Poland",                  
+                "template": "31st Tactical airbase, Krzesiny airbase Poznan, Poland, 3rd and 6th aviation squadron, F-16."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [17.852835,52.381148]
+            },
+            "properties": {
+                "type": "33rd Airlift airbase, Powidz, Poland",                  
+                "template": "33rd Airlift airbase, Powidz, Poland, 14th Aviation Squadron, C-130, 7th Special Operation Squadron, Mi-17."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [19.178244,51.552385]
+            },
+            "properties": {
+                "type": "32nd Tactical airbase, Lask, Poland",                  
+                "template": "32nd Tactical airbase, Lask, Poland, 10th Aviation Squadron, F-16."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [19.785173,50.077807]
+            },
+            "properties": {
+                "type": "8th airlift airbase, Krakow, Poland",                  
+                "template": "8th airlift airbase, Krakow, Poland, 12th and 13th aviation squadron, M28B and C-295M."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [15.824786,53.791051]
+            },
+            "properties": {
+                "type": "21st Tactical airbase, Swidwin, Poland",                  
+                "template": "21st Tactical airbase, Swidwin, Poland, 40th aviation squadron, SU-22."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [18.514528,54.581794]
+            },
+            "properties": {
+                "type": "43rd Navy airbase, Gdynia, Poland",                  
+                "template": "43rd Navy airbase, Gdynia, Poland, Helicopter squadron (ASW role), SH-2G."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [17.766457,54.416842]
+            },
+            "properties": {
+                "type": "44th Navy airbase, Siemirowice, Poland",                  
+                "template": "44th Navy airbase, Siemirowice, Poland, Helicopter and Aviation squadron (ASW role), M28B, Mi-14."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [18.671446,54.248032]
+            },
+            "properties": {
+                "type": "49th airbase, Pruszcz Gdanski, Poland",                  
+                "template": "49th airbase, Pruszcz Gdanski, Poland, Attack Helicopter squadron, Mi-24, Mi-2."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [23.395213,55.894600]
+            },
+            "properties": {
+                "type": "Zokniai Airbase, Siauliai, Lithuania",                  
+                "template": "Zokniai Airbase, Siauliai, Lithuania, Home to NATO Baltic Air Policing mission."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [24.206931,59.259936]
+            },
+            "properties": {
+                "type": "Amari airbase, Harjumaa, Estonia",                  
+                "template": "Amari airbase, Harjumaa, Estonia, Since april 2014 hosting NATO Baltic Air Policing mission."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [9.856815,57.095229]
+            },
+            "properties": {
+                "type": "Aalborg airbase, Aalborg, Denmark",                  
+                "template": "Aalborg airbase, Aalborg, Denmark, 721 squadron (C-130J-30 Hercules)."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [9.104603,56.297384]
+            },
+            "properties": {
+                "type": "Karup airbase, Karup, Denmark",                  
+                "template": "Karup airbase, Karup, Denmark, ."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [9.265834,55.221178]
+            },
+            "properties": {
+                "type": "Skrydstrup airbase, Skrydstrup, Denmark",                  
+                "template": "Skrydstrup airbase, Skrydstrup, Denmark, 727 and 730 squadron (F-16AM, F-16BM)."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [12.276220,53.918247]
+            },
+            "properties": {
+                "type": "Rostock-Laage airbase, Rostock, Germany",                  
+                "template": "Rostock-Laage airbase, Rostock, Germany, Jagdgeschwader 73 (Eurofighter Typhoon)."
+            }
+        }
+        
+    ]
+}

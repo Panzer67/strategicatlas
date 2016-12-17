@@ -1,0 +1,624 @@
+{
+    "app": [{
+            "type": "map",
+            "path": "widgets/map/map",
+            "options": {
+                "id": "map-div",
+                "mapOptions": {
+                    "center": [25.609, 56.285],
+                    "zoom": 6,
+                    "basemap": "topo",
+                    "logo": false,
+                    "slider": false
+
+                },
+                "basemaps": {
+                    "baseMapLayers": [{
+                            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Specialty/DeLorme_World_Base_Map/MapServer"
+                        }
+                    ],
+                    "thumbnailUrl": "https://www.example.com/images/thumbnail_2014-11-25_61051.png",
+                    "title": "Delorme"
+                },
+                "layers": [
+                    {
+                        "type": "geojsonPolygonLayer",
+                        "properties": {
+                            "path": "geojson/russia.geojson",
+                            "id": "russia",
+                            "className": "Russia",
+                            "symbol": {
+                                "fillColor": [255, 0, 0, 0.2],
+                                "lineColor": [0, 0, 0, 0.4]
+                            },
+                            "infoTemplate": false,
+                            "visible": false
+
+                        }
+                    },
+                    {
+                        "type": "geojsonPolygonLayer",
+                        "properties": {
+                            "path": "geojson/nato-single.geojson",
+                            "id": "nato",
+                            "className": "NATO",
+                            "symbol": {
+                                "fillColor": [0, 40, 222, 0.2],
+                                "lineColor": [0, 0, 0, 0.4]
+                            },
+                            "infoTemplate": false,
+                            "visible": false
+
+                        }
+                    },
+                    {
+                        "type": "geojsonPolygonLayer",
+                        "properties": {
+                            "path": "geojson/disputed-areas-east-europe.geojson",
+                            "id": "disputed-areas",
+                            "className": "Disputed areas Eastern Europe",
+                            "symbol": {
+                                "fillColor": [236, 255, 0, 0.45],
+                                "lineColor": [255, 0, 0, 0.9]
+                            },
+                            "infoTemplate": true,
+                            "visible": true
+
+                        }
+                    },
+                    {
+                        "type": "geojsonPolygonLayer",
+                        "properties": {
+                            "path": "geojson/suwalki-gap.geojson",
+                            "id": "suwalki-gap",
+                            "className": "The Suwalki Gap",
+                            "symbol": {
+                                "fillColor": [236, 255, 0, 0.4],
+                                "lineColor": [0, 0, 0, 0.4]
+                            },
+                            "infoTemplate": true,
+                            "visible": true
+
+                        }
+                    },
+                    {
+                        "type": "geojsonPointLayer",
+                        "properties": {
+                            "path": "geojson/russian-airdefense.geojson",
+                            "id": "russia-airdefense",
+                            "className": "Russian air defense systems",
+                            "symbol": {
+                                "url": "pictures/red/red_airdefense_missile.png",
+                                "height": 30,
+                                "width": 30
+                            },
+                            "infoTemplateTitle": "Russian air defense systems",
+                            "rangeVisible": true,
+                            "visible": true,
+                            "movable": true
+                        }
+                    },
+                    {
+                        "type": "geojsonPointLayer",
+                        "properties": {
+                            "path": "geojson/russian-surface-to-surface-missiles.json",
+                            "id": "russia-surface-to-surface",
+                            "className": "Russian surface to surface/anti-ship missile systems",
+                            "symbol": {
+                                "url": "pictures/red/red_surface_to_surface_missile.png",
+                                "height": 30,
+                                "width": 30
+                            },
+                            "infoTemplateTitle": "Russian surface to surface/anti-ship missile systems",
+                            "rangeVisible": true,
+                            "visible": true,
+                            "movable": true
+                        }
+                    },
+                    {
+                        "type": "geojsonPointLayer",
+                        "properties": {
+                            "path": "geojson/russian-radars.geojson",
+                            "id": "russia-radars",
+                            "className": "Russian Radars",
+                            "symbol": {
+                                "url": "pictures/red/red_radar.png",
+                                "height": 30,
+                                "width": 30
+                            },
+                            "infoTemplateTitle": "Russian Radar Systems",
+                            "rangeVisible": false,
+                            "visible": true,
+                            "movable": false
+                        }
+                    },
+                    {
+                        "type": "geojsonPointLayer",
+                        "properties": {
+                            "path": "geojson/russian-airbases.geojson",
+                            "id": "russia-airbases",
+                            "className": "Russian Airbases",
+                            "symbol": {
+                                "url": "pictures/red/red_airfield.png",
+                                "height": 24,
+                                "width": 24
+                            },
+                            "infoTemplateTitle": "Russian Airbases",
+                            "visible": true
+                        }
+                    },
+                    {
+                        "type": "geojsonPointLayer",
+                        "properties": {
+                            "path": "geojson/russian-navy-bases.json",
+                            "id": "russia-navy-bases",
+                            "className": "Russian Navy Bases",
+                            "symbol": {
+                                "url": "pictures/red/red_naval_base.png",
+                                "height": 24,
+                                "width": 24
+                            },
+                            "infoTemplateTitle": "Russian Navy Bases",
+                            "visible": true
+
+                        }
+                    },
+                    {
+                        "type": "geojsonPointLayer",
+                        "properties": {
+                            "path": "geojson/russian-ships.json",
+                            "id": "russia-ships",
+                            "className": "Russian Navy ships",
+                            "symbol": {
+                                "url": "pictures/red/red_frigate.png",
+                                "height": 30,
+                                "width": 30
+                            },
+                            "infoTemplateTitle": "Russian Navy ships",
+                            "rangeVisible": true,
+                            "visible": true,
+                            "movable": true
+                        }
+                    },
+                    {
+                        "type": "geojsonPointLayer",
+                        "properties": {
+                            "path": "geojson/nato-airbases.json",
+                            "id": "nato-airbases",
+                            "className": "NATO Airbases",
+                            "symbol": {
+                                "url": "pictures/blue/blue_airfield.png",
+                                "height": 24,
+                                "width": 24
+                            },
+                            "infoTemplateTitle": "NATO Airbases",
+                            "visible": true
+
+                        }
+                    },
+                    {
+                        "type": "geojsonPointLayer",
+                        "properties": {
+                            "path": "geojson/neutral-airbases.json",
+                            "id": "neutral-airbases",
+                            "className": "Neutral Airbases",
+                            "symbol": {
+                                "url": "pictures/neutral/neutral_airfield.png",
+                                "height": 24,
+                                "width": 24
+                            },
+                            "infoTemplateTitle": "Neutral Airbases",
+                            "visible": true
+
+                        }
+                    }
+                ]
+
+            }
+        },
+        {
+            "type": "pane",
+            "path": "widgets/sidePane/sidePane",
+            "node": "sidePane",
+            "options": {
+                "widgets": [
+                    {
+                        "path": "widgets/legend/legend",
+                        "node": "legend",
+                        "target": "sidePaneContent",
+                        "options": {
+                            "buttonIcon": "glyphicon-list",
+                            "title": "Legend",
+                            "nodeId": "legend",
+                            "display": "block",
+                            "titleLegend": "Baltic Strategic Theater",
+                            "layers": {
+                                "geojsonPointLayers": ["russia-airdefense", "russia-surface-to-surface", "russia-radars", "russia-airbases", "russia-navy-bases", "nato-airbases", "neutral-airbases"],
+                                "geojsonPolygonLayers": ["disputed-areas", "suwalki-gap", "nato", "russia"]
+                            },
+                            "layerOrder": ["russia-airdefense", "russia-surface-to-surface", "russia-radars", "russia-airbases", "russia-navy-bases", "nato-airbases", "neutral-airbases", "suwalki-gap", "nato", "russia", "disputed-areas"],
+                            "basemapSwitcher": [
+                                {
+                                    "name": "Topographic",
+                                    "basemap": "topo"
+                                },
+                                {
+                                    "name": "Satellite",
+                                    "basemap": "satellite"
+                                },
+                                {
+                                    "name": "Hybrid",
+                                    "basemap": "hybrid"
+                                },
+                                {
+                                    "name": "Delorme",
+                                    "basemap": "delorme"
+                                },
+                                {
+                                    "name": "Open Street Map",
+                                    "basemap": "osm"
+                                },
+                                {
+                                    "name": "Gray",
+                                    "basemap": "gray"
+                                },
+                                {
+                                    "name": "Street",
+                                    "basemap": "streets-navigation-vector"
+                                }
+
+                            ]
+                        }
+                    },
+                    {
+                        "path": "widgets/armamentToolbox/armamentToolbox",
+                        "node": "armtoolbox",
+                        "target": "sidePaneContent",
+                        "options": {
+                            "nodeId": "armtoolbox",
+                            "display": "none",
+                            "buttonIcon": "glyphicon-screenshot",
+                            "title": "Armament",
+                            "bombs": [
+                                {
+                                    "id": "little-boy",
+                                    "type": "Little Boy, Hiroshima, 15kt",
+                                    "yield": 15
+                                },
+                                {
+                                    "id": "fat-man",
+                                    "type": "Fat Man, Nagasaki, 20kt",
+                                    "yield": 20
+                                },
+                                {
+                                    "id": "tn80/81",
+                                    "type": "TN80/81, French warhead, 300kt",
+                                    "yield": 300
+                                },
+                                {
+                                    "id": "b61",
+                                    "type": "B61, US tactical nuke, 340kt",
+                                    "yield": 340
+                                },
+                                {
+                                    "id": "ss-27",
+                                    "type": "SS-27 Topol M, Russian, 800kt",
+                                    "yield": 800
+                                },
+                                {
+                                    "id": "minuteman",
+                                    "type": "Minuteman (W-59), US, 1mt",
+                                    "yield": 1000
+                                },
+                                {
+                                    "id": "dong-feng-4",
+                                    "type": "Dong Feng 4, China, 3.3mt",
+                                    "yield": 3300
+                                },
+                                {
+                                    "id": "dong-feng-5",
+                                    "type": "Dong Feng 5, China, 5mt",
+                                    "yield": 5000
+                                },
+                                {
+                                    "id": "tsar-bomba",
+                                    "type": "Tsar Bomba, USSR, 50mt",
+                                    "yield": 50000
+                                }
+                            ],
+                            "blue": {
+                                "missiles": [
+                                    {
+                                        "id": "mgm-140",
+                                        "type": "MGM-140 ATACMS",
+                                        "range": 300,
+                                        "classType": "surfToSurface",
+                                        "description": ""
+                                    }
+                                ],
+                                "artillery": [
+                                    {
+                                        "id": "panzerhaubitze",
+                                        "type": "Panzerhaubitze 2000",
+                                        "range": 40,
+                                        "classType": "mechArtillery",
+                                        "description": ""
+                                    },
+                                    {
+                                        "id": "m10946",
+                                        "type": "M109A6 Paladin",
+                                        "range": 30,
+                                        "classType": "mechArtillery",
+                                        "description": ""
+                                    },
+                                    {
+                                        "id": "m142",
+                                        "type": "M142 HIMARS",
+                                        "range": 300,
+                                        "classType": "rockArtillery",
+                                        "description": ""
+                                    }
+                                ],
+                                "airdefense": [
+                                    {
+                                        "id": "mim-104b",
+                                        "type": "MIM-104B Patriot (PAC-1)",
+                                        "range": 70,
+                                        "classType": "airdefenseMissile",
+                                        "description": ""
+                                    },
+                                    {
+                                        "id": "mim-104c",
+                                        "type": "MIM-104C Patriot (PAC-2)",
+                                        "range": 160,
+                                        "classType": "airdefenseMissile",
+                                        "description": ""
+                                    }
+                                ]
+                            },
+                            "red": {
+                                "missiles": [
+                                    {
+                                        "id": "iskander",
+                                        "type": "9K720 Iskander-M/SS-26",
+                                        "weapons": [
+                                            {
+                                                "missile": "9M723K1",
+                                                "range": 500,
+                                                "speed": "Mach 6.2",
+                                                "precision": "CEP 5-7m",
+                                                "weaponType": "surfaceToSurfaceBallisticMissile"
+                                            },
+                                            {
+                                                "missile": "9M723K1",
+                                                "range": 1500,
+                                                "speed": "Mach 6.2",
+                                                "precision": "CEP 5-7m",
+                                                "weaponType": "surfaceToSurfaceBallisticMissile"
+                                            }
+                                        ],
+                                        "systemType": "surfaceToSurfaceMissile",
+                                        "description": ""
+                                    },
+                                    {
+                                        "id": "scarabA",
+                                        "type": "OTR-21 Tochka-U/SS-21 Scarab A",
+                                        "weapons": [
+                                            {
+                                                "missile": "Scarab A",
+                                                "range": 70,
+                                                "speed": "Mach 5.3",
+                                                "precision": "CEP 150m",
+                                                "weaponType": "surfaceToSurfaceBallisticMissile"
+                                            }
+                                        ],
+                                        "systemType": "surfaceToSurfaceMissile",
+                                        "description": ""
+                                    },
+                                    {
+                                        "id": "scarabB",
+                                        "type": "OTR-21 Tochka-U/SS-21 Scarab B",
+                                        "weapons": [
+                                            {
+                                                "missile": "Scarab B",
+                                                "range": 120,
+                                                "speed": "Mach 5.3",
+                                                "precision": "CEP 95m",
+                                                "weaponType": "surfaceToSurfaceBallisticMissile"
+                                            }
+                                        ],
+                                        "systemType": "surfaceToSurfaceMissile",
+                                        "description": ""
+                                    },
+                                    {
+                                        "id": "scarabC",
+                                        "type": "OTR-21 Tochka-U/SS-21 Scarab C",
+                                        "weapons": [
+                                            {
+                                                "missile": "Scarab C",
+                                                "range": 185,
+                                                "speed": "Mach 5.3",
+                                                "precision": "CEP 70m",
+                                                "weaponType": "surfaceToSurfaceBallisticMissile"
+                                            }
+                                        ],
+                                        "systemType": "surfaceToSurfaceMissile",
+                                        "description": ""
+                                    }
+                                ],
+                                "artillery": [
+                                    {
+                                        "id": "2s19",
+                                        "type": "2S19 Msta",
+                                        "weapons": [
+                                            {
+                                                "gun": "",
+                                                "caliber": "152mm",
+                                                "range": 36,
+                                                "weaponType": "howitzer"
+                                            }
+                                        ],
+                                        "systemType": "mechArtillery",
+                                        "description": ""
+                                    },
+                                    {
+                                        "id": "bm-21",
+                                        "type": "BM-21 GRAD",
+                                        "weapons": [
+                                            {
+                                                "rocket": "9M519",
+                                                "caliber": "122mm",
+                                                "range": 40,
+                                                "weaponType": "rocket"
+                                            }
+                                        ],
+                                        "systemType": "rockArtillery",
+                                        "description": "BM-21 122 mm multiple rocket launcher (MRL) system."
+                                    },
+                                    {
+                                        "id": "bm-30",
+                                        "type": "BM-30 Smerch",
+                                        "weapons": [
+                                            {
+                                                "rocket": "9M528",
+                                                "caliber": "300mm",
+                                                "range": 90,
+                                                "weaponType": "rocket"
+                                            }
+                                        ],
+                                        "systemType": "rockArtillery",
+                                        "description": "BM-30 Smerch is a heavy multiple rocket launcher"
+                                    }
+                                ],
+                                "airdefense": [
+                                    {
+                                        "id": "s-300p",
+                                        "type": "S-300P",
+                                        "weapons": [
+                                            {
+                                                "missile": "5V55R",
+                                                "range": 90,
+                                                "weaponType": "surfaceToAirMissile"
+                                            }
+                                        ],
+                                        "systemType": "airdefenseMissile",
+                                        "description": ""
+                                    },
+                                    {
+                                        "id": "s-400",
+                                        "type": "S-400",
+                                        "weapons": [
+                                            {
+                                                "missile": "40N6",
+                                                "range": 400,
+                                                "weaponType": "surfaceToAirMissile"
+                                            }
+                                        ],                                        
+                                        "systemType": "airdefenseMissile",
+                                        "description": "S-400 airdefense system. "
+                                    }
+                                ]
+                            },
+                            "neutral": {
+                                "missiles": [
+                                    {
+                                        "id": "iskander",
+                                        "type": "9K720 Iskander-M/SS-26",
+                                        "range": 500,
+                                        "classType": "surfToSurface",
+                                        "description": ""
+                                    },
+                                    {
+                                        "id": "otr-21",
+                                        "type": "OTR-21 Tochka-U/SS-21",
+                                        "range": 120,
+                                        "classType": "surfToSurface",
+                                        "description": ""
+                                    }
+                                ],
+                                "artillery": [
+                                    {
+                                        "id": "2s35",
+                                        "type": "2S35 Koalitsiya-SV",
+                                        "range": 40,
+                                        "classType": "mechArtillery",
+                                        "description": ""
+                                    },
+                                    {
+                                        "id": "bm-21",
+                                        "type": "BM-21 GRAD",
+                                        "range": 40,
+                                        "classType": "rockArtillery",
+                                        "description": ""
+                                    },
+                                    {
+                                        "id": "bm-30",
+                                        "type": "BM-30 Smerch",
+                                        "range": 90,
+                                        "classType": "rockArtillery",
+                                        "description": ""
+                                    }
+                                ],
+                                "airdefense": [
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "path": "widgets/infoPane/infoPane",
+                        "node": "infoPane",
+                        "target": "sidePaneContent",
+                        "options": {
+                            "nodeId": "infoPane",
+                            "display": "none",
+                            "buttonIcon": "glyphicon-book",
+                            "title": "Information",
+                            "resourcePath": "baltictheater/requestInfo",
+                            "resourcePathAllTitles": "baltictheater/requestAllAvailableTitles"
+                        }
+                    },
+                    {
+                        "path": "widgets/query/query",
+                        "node": "query",
+                        "target": "sidePaneContent",
+                        "options": {
+                            "nodeId": "query",
+                            "display": "none",
+                            "buttonIcon": "glyphicon-search",
+                            "title": "Query",
+                            "layers": {
+                                "geojsonPointLayers": ["russia-airdefense", "russia-radars", "russia-airbases", "nato-airbases", "neutral-airbases"]
+                            }
+                        }
+                    },
+                    {
+                        "path": "widgets/measurement/measurement",
+                        "node": "measurement",
+                        "target": "sidePaneContent",
+                        "options": {
+                            "nodeId": "measurement",
+                            "display": "none",
+                            "buttonIcon": "glyphicon-wrench",
+                            "title": "Measurement"
+
+                        }
+                    },
+                    {
+                        "path": "widgets/worldDatabase/worldDatabase",
+                        "node": "worldDatabase",
+                        "target": "sidePaneContent",
+                        "options": {
+                            "nodeId": "worldDatabase",
+                            "display": "none",
+                            "buttonIcon": "glyphicon-globe",
+                            "title": "World Database"
+
+                        }
+                    }
+
+                ]
+
+
+            }
+        }]
+}

@@ -1,0 +1,237 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.401946,54.766611]
+            },
+            "properties": {
+                "type": "Chkalovsk naval guards airbase",                  
+                "template": "Chkalovsk naval guards airbase. It is Kaliningrad's largerst airfield equipped with SU-24, SU-27, MI-24/35, AN-24/26, MI-8, AN-2/12. Google Maps imagery shows the base is in state of renovation."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [19.981842,54.935100]
+            },
+            "properties": {
+                "type": "Donskoye Naval Guards Helicopter airbase",                  
+                "template": "Donskoye Naval Guards Helicopter Airbase. "
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [21.784556,54.602687]
+            },
+            "properties": {
+                "type": "Chernyakhovsk Naval Guards airbase",                  
+                "template": "Chernyakhovsk Naval Guards airbase. Guard Air Fighter Sqdr.: 7045th AF Bdge. Comprises x45 SU-24M and x24 SU-24MR."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [28.433280,57.296751]
+            },
+            "properties": {
+                "type": "Ostrov airbase",                  
+                "template": "Ostrov airbase."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.592118,54.890242]
+            },
+            "properties": {
+                "type": "Khrabrovo Transport airbase",                  
+                "template": "Khrabrovo Transport airbase."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [36.295809,51.750479]
+            },
+            "properties": {
+                "type": "Kursk Vostochny airbase",                  
+                "template": "Kursk Vostochny airbase. 14th Interceptor aviation regiment (MiG-29SMT/UBT)."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [34.101866,57.658587]
+            },
+            "properties": {
+                "type": "Khotilovo airbase",                  
+                "template": "Khotilovo airbase. 790th Interceptor aviation regiment (MiG-31, SU-27)."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [34.147910,61.886901]
+            },
+            "properties": {
+                "type": "Petrozavodski airbase",                  
+                "template": "Petrozavodski airbase. 6961st aviation base (SU-27)."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [33.453994,68.148263]
+            },
+            "properties": {
+                "city": "Monchegorsk",
+                "type": "Monchegorsk airbase",                  
+                "template": "Monchegorsk airbase. 98th guards composite aviation regiment (SU-24, MiG-31, Mi-8MTV).",
+                "runwayLength": 2500
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [33.453994,68.148263]
+            },
+            "properties": {
+                "city": "Vyazma",
+                "type": "Vyazma airbase",                  
+                "template": "Vyazma airbase. Helicopter regiment (Mi-8TM, Mi-24V, Mi-28N).",
+                "runwayLength": 2000
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [39.139445,51.622168]
+            },
+            "properties": {
+                "city": "Voronezh",
+                "type": "Voronezh Malshevo airbase",                  
+                "template": "Voronezh Malshevo airbase. (SU-24M/MP, SU-34).",
+                "runwayLength": 2500
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [30.341197,59.688036]
+            },
+            "properties": {
+                "city": "Saint Petersburg",
+                "type": "Pushkin airbase",                  
+                "template": "Pushkin airbase. Helicopter regiment (i.a. Mi-28).",
+                "runwayLength": 2500
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [56.024568,57.914343]
+            },
+            "properties": {
+                "city": "Perm",
+                "type": "Perm International airport",                  
+                "template": "Perm International airport. 764th interceptor aviation regiment (MiG-31).",
+                "runwayLength": 3200
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [95.664471,56.124425]
+            },
+            "properties": {
+                "city": "Kansk",
+                "type": "Kansk airbase",                  
+                "template": "Kansk airbase. 764th interceptor aviation regiment (MiG-31).",
+                "runwayLength": 2500
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [61.297291,55.259573]
+            },
+            "properties": {
+                "city": "Chelyabinsk",
+                "type": "Shagol airbase",                  
+                "template": "Shagol airbase. (SU-24).",
+                "runwayLength": 2500
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [113.119941,51.916272]
+            },
+            "properties": {
+                "city": "Chita",
+                "type": "Domna airbase",                  
+                "template": "Domna airbase. (Mig-29, SU-30SM).",
+                "runwayLength": 2500
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [136.932838,50.408473]
+            },
+            "properties": {
+                "city": "Komsomolsk on Amur",
+                "type": "Komsomolsk on Amur airbase",                  
+                "template": "Komsomolsk on Amur airbase. (SU-24).",
+                "runwayLength": 2500
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [135.152681,48.464157]
+            },
+            "properties": {
+                "city": "Khabarovsk",
+                "type": "Khabarovsk airbase",                  
+                "template": "Khabarovsk airbase. 256th transport aviation base.",
+                "runwayLength": 2500
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [132.060434,43.347965]
+            },
+            "properties": {
+                "city": "Artyom",
+                "type": "Uglovoe airbase",                  
+                "template": "Uglovoe airbase. (SU-27, Mig-31).",
+                "runwayLength": 2500
+            }
+        }
+       
+    ]
+}

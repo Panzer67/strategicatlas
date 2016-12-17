@@ -1,0 +1,68 @@
+{
+    "type": "FeatureCollection",
+    "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [19.953073,54.872909]
+            },
+            "properties": {
+                "type": "S-300P",
+                "weapons": [
+                    {   
+                        "missile": "5V55R",
+                        "range": 90,
+                        "weaponType": "surfaceToAirMissile"
+                    }                    
+                ],
+                "template": "S-300PS missile base<br>TER: 5N63S FLAP LID<br>TAR: 5N66M CLAM SHELL<br>max engagement range: 90km",
+                "faction": "red",
+                "systemType": "airdefense"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [21.012231, 54.681784]
+                
+            },
+            "properties": {
+                "type": "S-400",    
+                "weapons": [
+                    {    
+                        "missile": "40N6",                               
+                        "range": 400,
+                        "weaponType": "surfaceToAirMissile" 
+                    }
+                ],                
+                "template": "S-400 missile base(former S-200 base)<br>max engagement range: 400km<br>source: wikipedia",
+                "faction": "red",
+                "systemType": "airdefense"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [19.847640, 54.600429]
+            },
+            "properties": {
+                "type": "S-300PS",    
+                "weapons": [
+                    {   
+                        "missile": "5V55R",
+                        "range": 90,
+                        "weaponType": "surfaceToAirMissile"    
+                    }                    
+                ],                
+                "template": "S-300PS missile base<br>TER: 1 x 5N63S FLAP LID<br>TAR: 1 x 5N66M CLAM SHELL<br>Launcher: 8 x 5P85S/D TELs<br>Support: 1 x 40V6 mast assembly<br>max engagement range: 90km<br>source: wikipedia,wikimapia",
+                "faction": "red",
+                "systemType": "airdefense"
+            }
+        }
+        
+    ]
+}

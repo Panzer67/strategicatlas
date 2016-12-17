@@ -1,0 +1,59 @@
+<div class="panes armtoolboxClass">
+    <div class="btn-group wrapperWeaponsSwitcher" role="group">
+        <button type="button" class="btn btn-success buttonWeaponsSwitcher active" id="buttonConventional" name="panelSwitch" >Conventional</button>
+        <button type="button" class="btn btn-success buttonWeaponsSwitcher" id="buttonNuclear" name="panelSwitch">Nuclear</button>
+    </div>
+    <div class="weaponsPanel" id="conventional">
+        <div class="btn-group">
+            <button type="button" name="faction" value="red" id="buttonRedFaction" class="factionButtons btn btn-danger" >Red</button>
+            <button type="button" name="faction" value="blue" id="buttonBlueFaction" class="factionButtons btn btn-default">Blue</button>
+            <button type="button" name="faction" value="neutral" id="buttonNeutralFaction" class="factionButtons btn btn-default">Neutral</button>
+        </div>        
+        <div id="missilesDiv" class="form-inline">
+            <input type="radio" name="typeOfweaponSystem" value="missiles" class="typeOfWeaponSwitcher" checked>
+            <select id="selectorMissiles" name="selectorMissiles" class="form-control weaponSelectors">
+
+            </select>
+            Missiles
+        </div>
+        <div id="artilleryDiv" class="form-inline">
+            <input type="radio" name="typeOfweaponSystem" value="artillery" class="typeOfWeaponSwitcher" >
+            <select id="selectorArtillery" name="selectorArtillery" class="form-control weaponSelectors" >
+
+            </select>
+            Artillery
+        </div>
+        <div id="airdefenseDiv" class="form-inline">
+            <input type="radio" name="typeOfweaponSystem" value="airdefense" class="typeOfWeaponSwitcher" >
+            <select id="selectorAirdefense" name="selectorAirdefense" class="form-control weaponSelectors" >
+
+            </select>
+            Air defense
+        </div>
+        <div>
+            <button id="removeConventionalButton" class="btn btn-warning" data-dojo-attach-event="onclick: removeConventional">Clear</button>
+        </div>        
+    </div>
+    <div class="weaponsPanel " id="nuclear">
+        <div class="form-inline input-group">
+            <select id="selector" name="selector" class="form-control">        
+
+            </select>
+            <span class="input-group-btn">
+                <button class="btn btn-success" data-dojo-attach-event="onclick: removeBomb">Clear</button>
+            </span>
+        </div>
+        <div id="radioGroundAirBurst">
+            <input type="radio" name="typeOfBurst" value="groundburst" id="radioGroundburst" checked>Ground burst
+            <input type="radio" name="typeOfBurst" value="airburst" id="radioAirburst">Air burst
+        </div>
+        <div id="airPressures">Maximize overpressure.<br>
+            <input class="maxOverpressure" type="radio" name="airpressure" value="5psi" checked>5psi
+            <input class="maxOverpressure" type="radio" name="airpressure" value="10psi">10psi
+            <input class="maxOverpressure" type="radio" name="airpressure" value="20psi">20psi
+        </div>
+        <div id="casualties">
+            <p>Casualties: <span id="totalCasualties"></span></p>
+        </div>
+    </div>    
+</div>

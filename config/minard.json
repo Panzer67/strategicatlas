@@ -1,0 +1,21 @@
+{
+    "app": [
+        {
+            "type": "map",
+            "path": "widgets/map/map1",
+            "options": {
+                "id": "mapd3",
+                "width": 1200,
+                "height": 800
+            }
+        },
+        {
+            "type": "pane",
+            "path": "widgets/sidePane/sidePane",
+            "node": "sidePane",
+            "options": {
+                
+            }
+        }
+    ]
+}

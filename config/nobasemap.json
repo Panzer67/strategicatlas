@@ -1,0 +1,29 @@
+{
+    "widgets": [{
+            "type": "map",
+            "path": "widgets/map/map",
+            "options": {
+                "id": "map-div",
+                "mapOptions": {
+                    "center": [5.609, 51.285],
+                    "zoom": 6,
+                    "basemap": "satellite",
+                    "logo": false,
+                    "slider": false
+
+                },
+                "layers": [
+                    {
+                        "type": "wmsLayer",
+                        "url": "http://localhost:8008/geoserver/natovsrussia/wms",
+                        "props": {
+                            "id": "oceans",
+                            "visibleLayers": ["natovsrussia:ne_10m_ocean"],
+                            "visible": true
+                        }
+                    }
+                ]
+            }
+        }
+        ]
+}

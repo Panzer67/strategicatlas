@@ -1,0 +1,4 @@
+
+var constanten = {
+        url: "url"
+    };

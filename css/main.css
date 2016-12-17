@@ -1,0 +1,345 @@
+
+html, body { 
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#map-div {
+    position: absolute;
+    padding: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+#search {
+    position: absolute;
+    z-index: 2;
+    top: 5px;
+    right: 320px;
+}
+
+#locate {
+    position: absolute;
+    top: 95px;
+    left: 22px;
+    z-index: 50;
+}
+
+#edit {
+    position: absolute;
+    top: 20px;
+    left: 60px;
+    z-index: 50;
+}
+
+#toolbar {
+    position: absolute;
+    top: 20px;
+    left: 60px;
+    z-index: 50;
+}
+
+#drawtool {
+    position: absolute;
+    bottom: 20px;
+    left: 60px;
+    z-index: 50;
+    background-color: #fff;
+}
+
+#info {
+    position: absolute;
+    left: 15px;
+    bottom: 5px;
+    color: #000;
+    z-index: 50;
+    background-color: #fff;
+}
+
+#layerss {
+    position: absolute;
+    top: 130px;
+    left: 22px;
+    width: 240px;
+    z-index: 50;
+    background-color: #fff;
+}
+
+#scale {
+    position: absolute;
+    bottom: 20px;
+    left: 22px;
+    width: 100px;   
+    z-index: 50;    
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#sidePane {
+    position: relative;
+    float: right;
+    z-index: 50;
+    background-color: #fff;    
+    width: 400px;
+    height: 98%;
+    border-radius: 0px;    
+    margin: 0.5%;
+}
+
+#sidePaneHeader {
+    background-color: #342823;
+    border-radius: 0px;
+    height: 60px;
+    color: white;
+    font-size: 20px;
+    padding: 4px;
+}
+
+
+
+#sidePaneContent {
+    
+    
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+.content {
+    
+}
+
+.innerPanes {
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+#sidePaneFooter {
+    background-color: #DCD8D8;
+    font-size: 24px;
+    border-radius: 0px;
+    height: 60px;
+    width: 400px;
+    padding: 4px 0 0 4px;
+    position:absolute;
+    bottom: 5px;
+}
+
+.scrolls { 
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 80px;
+    white-space:nowrap;
+} 
+
+.footerButtons {
+    display: inline-block;
+    border: 1px solid black;
+    margin: 0 4px 0 0;
+    cursor: pointer;
+    padding: 4px;
+    color: black;
+}
+
+.footerButtons:hover {    
+    border: 1px solid #D84204;
+}
+
+.selectedFooterButton {
+    color: #D84204;
+}
+
+#layers {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 50;
+    background-color: #fff;    
+    width: 300px;
+    border-radius: 8px;
+
+    margin: 0 5px 5px 0;
+}
+
+#layerheader  {
+    background-color: #9F9C9C;
+    font-size: 24px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#layerheader svg {
+    margin: 0 5px 0 5px;
+}
+
+#layerlist {
+    border-radius: 0 0 5px 5px;
+    margin: 0 0 10px 0;
+}
+
+#layerlist td {
+    padding: 5px;
+}
+
+#layerlist div {
+    height: 40px;   
+
+    padding: 12px 10px 10px 10px;
+    background-color: white;
+
+}
+
+#layerlist div:hover {
+    background-color: #DCD8D8;
+}
+
+#layerlist div span {
+    margin: 0 0 0 10px;
+}
+
+#layerlist div input {
+    margin: 0px 10px 0 0;
+}
+
+#layerlist h3 {    
+    margin: 0 0 0 0;
+    text-align: center;
+}
+
+#legenda {
+    border-radius: 0 0 5px 5px;
+    margin: 10px;    
+    width: 380px;
+    
+}
+
+#legenda td {
+    padding: 5px;
+}
+
+#legenda div {
+    height: 40px;   
+
+    padding: 12px 10px 10px 10px;
+    background-color: white;
+
+}
+
+#legenda div:hover {
+    background-color: #DCD8D8;
+}
+
+#legenda div span {
+    margin: 0 0 0 10px;
+}
+
+#legenda div input {
+    margin: 0px 10px 0 0;
+}
+
+#legenda h3 {    
+    margin: 0 0 0 0;
+    text-align: center;
+}
+
+#infoPane {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    z-index: 50;    
+    width: 400px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+#infoPaneHeader {
+    background-color: #9F9C9C;
+    font-size: 24px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#infoPaneHeader svg {
+    margin: 0 5px 0 5px;
+}
+
+#infoPaneContent {
+    border-radius: 0 0 5px 5px;
+    margin: 0 0 10px 0;
+    height: 600px;
+    overflow-y: scroll;
+    background-color: #fff;
+}
+
+#nukef {
+    position: absolute;
+    top: 5px;
+    left: 500px;   
+    display: none;
+    z-index: 50;
+    width: 192px;
+    height: 140px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+#nuke button {
+    margin: 0 6px 0 4px;
+}
+
+#airPressures {
+    margin: 0 0 0 6px;
+}
+
+#radioGroundAirBurst {
+    margin: 0 0 0 6px;
+}
+
+#casualties p {
+    margin: 0 0 2px 6px;
+}
+
+#selector {
+    width : 300px;
+    margin: 6px 0 0 6px;
+}
+
+#bombkinfo {
+    width                 : 340px;
+    height                : 240px;
+
+}
+
+#radiicolor {
+    height                  : 40px;
+    width                   : 20px;
+    margin                  : 0 6px 0 0;
+}
+
+#radiusinfo {
+    height                  : 40px;
+    width                   : 230px; 
+}
+
+#bombinfo sup {
+    font-size               : 6px;
+}
+
+/*
+*
+* css startpage
+*/
+
+.wrapper {
+    padding: 40px;
+
+}
+
+.innerWrapper {
+
+}

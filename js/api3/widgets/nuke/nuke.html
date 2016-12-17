@@ -1,0 +1,25 @@
+<div class="panes nukeClass">
+    <div>
+        <select data-dojo-attach-point="selector" id="selector" name="selector" class="form-control">        
+
+        </select>       
+    </div>
+    <div id="radioGroundAirBurst">
+        <input type="radio" name="typeOfBurst" value="groundburst" id="radioGroundburst" checked>Ground burst
+        <input type="radio" name="typeOfBurst" value="airburst" id="radioAirburst">Air burst
+    </div>
+    <div id="airPressures">Maximized overpressure effect:<br>
+        <input class="maxOverpressure" type="radio" name="airpressure" value="5psi" checked>5psi
+        <input class="maxOverpressure" type="radio" name="airpressure" value="10psi">10psi
+        <input class="maxOverpressure" type="radio" name="airpressure" value="20psi">20psi
+    </div>
+    <div id="casualties">
+        <p>Casualties: <span id="totalCasualties"></span></p>
+    </div>
+    <div>
+        <button class="bombClearBtn btn btn-success" data-dojo-attach-event="onclick: removeBomb">Clear</button>
+    </div>
+    <div id="basemapList" data-dojo-attach-point="basemapList">
+        
+    </div>
+</div>

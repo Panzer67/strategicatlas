@@ -1,0 +1,35 @@
+{
+    "type": "FeatureCollection",
+    "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.181372,54.858592]
+            },
+            "properties": {
+                "type": "Pionersky Radar Station",                
+                "range": 6000,
+                "template": "Pionersky Radar Station(located at abondoned airbase Dunayevka<br>The radar was deemed operational in 2014. It covers 6000 km and tracks 500 objects simultaniously.",
+                "faction": "red",
+                "classType": "radar"    
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [26.480008,52.852513]
+            },
+            "properties": {
+                "type": "Hantsavichy Radar Station",                
+                "range": 2000,
+                "template": "Hantsavichy Radar Station, Belarus. Designed to identify launches of ballistic missiles from western Europe and to track satellites. The station is a 'Volga' type radar. It has a range 2000 kilometers and an azimuth of 120 degrees, with elevation of 4 degree to 70 degree.",
+                "faction": "red",
+                "classType": "radar"
+            }
+        }
+       
+    ]
+}

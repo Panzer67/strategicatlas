@@ -1,0 +1,162 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [33.534588,44.614521]
+            },
+            "properties": {
+                "city": "Sevastopol",
+                "type": "Sevastopol naval base",                  
+                "template": "Sevastopol naval base. Home to the Russian Black Sea fleet."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [37.835895,44.715921]
+            },
+            "properties": {
+                "city": "Novorossiysk",
+                "type": "Novorossiysk naval base",                  
+                "template": "Novorossiysk naval base. Russian Black Sea fleet."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [29.767773,59.984122]
+            },
+            "properties": {
+                "city": "Kronstadt",
+                "type": "Kronstadt naval base",                  
+                "template": "Kronstadt naval base. Russian Baltic Sea fleet."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [19.903704,54.645879]
+            },
+            "properties": {
+                "city": "Baltiysk",
+                "type": "Baltiysk naval base",                  
+                "template": "Baltiysk naval base. Russian Baltic Sea fleet."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [47.506289,42.989459]
+            },
+            "properties": {
+                "city": "Makhachkala",
+                "type": "Makhachkala naval base",                  
+                "template": "Makhachkala naval base. Russian Caspian Sea fleet."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [47.977922,46.301280]
+            },
+            "properties": {
+                "city": "Astrakhan",
+                "type": "Astrakhan naval base",                  
+                "template": "Astrakhan naval base. Russian Caspian Sea fleet."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [33.418133,69.083546]
+            },
+            "properties": {
+                "city": "Severomorsk",
+                "type": "Severomorsk naval base",                  
+                "template": "Severomorsk naval base. Russian Nothern Sea fleet."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [39.461552,68.074445]
+            },
+            "properties": {
+                "city": "Ostrovnoy",
+                "type": "Gremikha naval base",                  
+                "template": "Gremikha naval base. Russian Nothern Sea fleet."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [32.413573,69.436924]
+            },
+            "properties": {
+                "city": "Zapadnaya Litsa",
+                "type": "Zapadnaya Litsa naval base",                  
+                "template": "Zapadnaya Litsa naval base. Russian Nothern Sea fleet."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [32.789840,69.384118]
+            },
+            "properties": {
+                "city": "Vidyayevo",
+                "type": "Guba Ara naval base",                  
+                "template": "Guba Ara naval base. Russian Nothern Sea fleet."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [33.334886,69.258517]
+            },
+            "properties": {
+                "city": "Gadzhiyevo",
+                "type": "Gadzhiyevo naval base",                  
+                "template": "Gadzhiyevo naval base. Russian Nothern Sea fleet."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [131.919337,43.081362]
+            },
+            "properties": {
+                "city": "Vladivostok",
+                "type": "Vladivostok naval base",                  
+                "template": "Vladivostok naval base. Russian Pacific Sea fleet."
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [158.489392,52.917218]
+            },
+            "properties": {
+                "city": "Vilyuchinsk",
+                "type": "Kamchatka Rybachiy naval base",                  
+                "template": "Kamchatka Rybachiy naval base. Russian Pacific Sea fleet."
+            }
+        }       
+        
+    ]
+}

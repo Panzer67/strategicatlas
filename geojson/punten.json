@@ -1,0 +1,19 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [13.436148,52.448151]
+            },
+            "properties": {
+                "type": "Pionersky Radar Station",
+                "buffer": false,
+                "range": 6000,
+                "template": "Pionersky Radar Station(located at abondoned airbase Dunayevka<br>The radar was deemed operational in 2014. It covers 6000 km and tracks 500 objects simultaniously."
+            }
+        }
+       
+    ]
+}

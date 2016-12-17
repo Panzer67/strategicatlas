@@ -1,0 +1,46 @@
+{
+    "type": "FeatureCollection",
+    "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+    "features": [
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.571170,54.697592]
+            },
+            "properties": {
+                "type": "Iskander-M",
+                "weapons": [
+                    {     
+                        "missile": "9M723K1",
+                        "range": 500,
+                        "weaponType": "surfaceToSurfaceBallisticMissile"
+                    }                    
+                ],                
+                "template": "The Iskander-M is a short-range ballistic missile system. It has a operational range of 500 kilometer for Iskander-M and a CEP of 5-7 meters.",
+                "faction": "red",
+                "systemType": "surfaceToSurfaceMissile"
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [19.950318,54.917267]
+            },
+            "properties": {
+                "type": "K-300P Bastion-P",        
+                "weapons": [
+                    { 
+                        "missile": "P-800 Oniks/Yakhont",
+                        "range": 300,
+                        "weaponType": "antiShipCruiseMissile"
+                    }                    
+                ],
+                "template": "The K-300-P Bastion-P is a Russian mobile coastal defense system. It fires the P-800 Yakhont/Oniks antiship missile. This missile has a confirmed range of 300 kilometers, can reach speeds of Mach 2.6 and deliver warheads of 250 kg smi-armour piercing HE.",
+                "faction": "red",
+                "systemType": "surfaceToSurfaceMissile"
+            }
+        }   
+    ]
+}

@@ -1,0 +1,29 @@
+{
+    "type": "FeatureCollection",
+    "features": [ 
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [20.512760, 54.719689]
+            },
+            "properties": {
+                "type": "S-300PS",
+                "buffer": true,
+                "range": 90,
+                "template": "S-300PS missile base<br>TER: 5N63S FLAP LID<br>TAR: 5N66M CLAM SHELL<br>max engagement range: 90km",
+                "symbol": {
+                    "width": 90000,
+                    "height": 25000,
+                    "resource": {
+                        "primitive": "sphere"
+                    },
+                    "material": {
+                        "color": [51, 204, 51, 0.4]
+                    }
+                }
+            }
+        }
+
+    ]
+}

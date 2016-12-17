@@ -1,0 +1,95 @@
+{
+    "widgets": [{
+            "type": "map",
+            "path": "widgets/map/map",
+            "options": {
+                "id": "map-div",
+                "mapOptions": {
+                    "center": [5.609, 51.285],
+                    "zoom": 6,
+                    "basemap": "satellite",
+                    "logo": false,
+                    "slider": false
+
+                },
+                "layers": [                   
+                    {
+                        "type": "csvLayer",
+                        "url": "http://localhost/strategicatlas/csv/minard2.csv",
+                        "props": {
+                            "id": "minard",
+                            "title": "Napoloon's march",
+                            "visible": true
+                        },
+                        "infoTemp": {
+                            "title": "Napoleon's march to Moscow",
+                            "content": "${*}"
+                        }
+                    }
+                ]
+                
+            }
+        },
+        {
+            "path": "widgets/infoPane/infoPane",
+            "node": "infoPane",
+            "options": {
+                
+            }
+        },        
+        {
+            "path": "widgets/layerList/layerlist",
+            "node": "layers",
+            "options": {
+                "titleLegend": "Napolean's march to Mockba",
+                "layers": {                    
+                    "csvLayers": ["minard"]
+                    
+                },
+                "layerOrder": ["minard"]
+            }
+        },
+        {
+            "path": "widgets/armamentToolbox/armamentToolbox",
+            "node": "armtoolbox",
+            "options": {
+                "bombs": [
+                    {
+                        "name": "Little Boy, Hiroshima, 15kt",
+                        "yield": 15
+                    },
+                    {
+                        "name": "Fat Man, Nagasaki, 20kt",
+                        "yield": 20
+                    },
+                    {
+                        "name": "TN80/81, French warhead, 300kt",
+                        "yield": 300
+                    },
+                    {
+                        "name": "B61, US tactical nuke, 340kt",
+                        "yield": 340
+                    },
+                    {
+                        "name": "SS-27 Topol M, Russian, 800kt",
+                        "yield": 800
+                    },
+                    {
+                        "name": "Minuteman (W-59), US, 1mt",
+                        "yield": 1000
+                    },
+                    {
+                        "name": "Dong Feng 4, China, 3.3mt",
+                        "yield": 3300
+                    },
+                    {
+                        "name": "Dong Feng 5, China, 5mt",
+                        "yield": 5000
+                    },
+                    {
+                        "name": "Tsar Bomba, USSR, 50mt",
+                        "yield": 50000
+                    }]
+            }
+        }]
+}

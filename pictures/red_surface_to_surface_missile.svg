@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   width="592.90906"
+   height="592.90906"
+   id="svg2"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="NATO Map Symbol - Hostile - Artillery.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="994"
+     inkscape:window-height="915"
+     id="namedview24"
+     showgrid="false"
+     inkscape:zoom="1.1772463"
+     inkscape:cx="296.45453"
+     inkscape:cy="296.45453"
+     inkscape:window-x="57"
+     inkscape:window-y="32"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs4" />
+  <rect
+     width="411.26324"
+     height="411.26321"
+     x="-205.63162"
+     y="213.61864"
+     transform="matrix(0.70710678,-0.70710678,0.70710678,0.70710678,0,0)"
+     id="rect3859"
+     style="fill:none;stroke:#fb0421;stroke-width:8;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+  <g
+     transform="translate(0.92327881,128.34394)"
+     id="g3758">
+    <path
+       inkscape:connector-curvature="0"
+       d="m 256.52112,272.2797 0,-154.84692 c 0,-21.988801 25.38256,-53.19563 39.01013,-53.19563 13.62756,0 39.01013,31.206829 39.01013,53.19563 l 0,154.84692 z"
+       id="path2986"
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    <path
+       inkscape:connector-curvature="0"
+       d="m 295.53125,63.94148 0,208.33822"
+       id="path2988"
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+  </g>
+  <metadata
+     id="metadata3476">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+</svg>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/var/www/html/strategicatlas/js/api3/widgets/map/map.js</file>
+            <file>file:/var/www/html/strategicatlas/config/baltictheater.json</file>
+            <file>file:/var/www/html/strategicatlas/js/api3/widgets/armamentToolbox/armamentToolbox.js</file>
+            <file>file:/var/www/html/strategicatlas/geojson/russian-airdefense.geojson</file>
+            <file>file:/var/www/html/strategicatlas/js/api3/widgets/general/generalFunctions.js</file>
+            <file>file:/var/www/html/strategicatlas/geojson/russian-surface-to-surface-missiles.json</file>
+            <file>file:/var/www/html/strategicatlas/js/api3/widgets/map/geojsonPointLayer.js</file>
+            <file>file:/var/www/html/strategicatlas/js/api3/widgets/armamentToolbox/helperFunctions.js</file>
+        </group>
+    </open-files>
+</project-private>

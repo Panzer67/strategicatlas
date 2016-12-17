@@ -1,0 +1,133 @@
+{
+    "app": [{
+            "type": "map",
+            "path": "widgets/map/map",
+            "options": {
+                "id": "map-div",
+                "mapOptions": {
+                    "center": [5.609, 51.285],
+                    "zoom": 6,
+                    "basemap": "topo",
+                    "logo": false,
+                    "slider": false
+                },
+                "basemaps": {
+                    "baseMapLayers": [{
+                            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Specialty/DeLorme_World_Base_Map/MapServer"
+                        }
+                    ],
+                    "thumbnailUrl": "https://www.example.com/images/thumbnail_2014-11-25_61051.png",
+                    "title": "Delorme"
+                }
+            }
+        },
+        {
+            "type": "pane",
+            "path": "widgets/sidePane/sidePane",
+            "node": "sidePane",
+            "options": {
+                "widgets": [
+                    {
+                        "path": "widgets/nuke/nuke",
+                        "node": "nuke",
+                        "target": "sidePaneContent",
+                        "options": {
+                            "nodeId": "nuke",
+                            "display": "block",
+                            "buttonIcon": "glyphicon-screenshot",
+                            "title": "Nuclear Bomb Simulator",
+                            "bombs": [
+                                {
+                                    "id": "little-boy",
+                                    "text": "Little Boy, Hiroshima, 15kt",
+                                    "yield": 15
+                                },
+                                {
+                                    "id": "fat-man",
+                                    "text": "Fat Man, Nagasaki, 20kt",
+                                    "yield": 20
+                                },
+                                {
+                                    "id": "tn80/81",
+                                    "text": "TN80/81, French warhead, 300kt",
+                                    "yield": 300
+                                },
+                                {
+                                    "id": "b61",
+                                    "text": "B61, US tactical nuke, 340kt",
+                                    "yield": 340
+                                },
+                                {
+                                    "id": "ss-27",
+                                    "text": "SS-27 Topol M, Russian, 800kt",
+                                    "yield": 800
+                                },
+                                {
+                                    "id": "minuteman",
+                                    "text": "Minuteman (W-59), US, 1mt",
+                                    "yield": 1000
+                                },
+                                {
+                                    "id": "dong-feng-4",
+                                    "text": "Dong Feng 4, China, 3.3mt",
+                                    "yield": 3300
+                                },
+                                {
+                                    "id": "dong-feng-5",
+                                    "text": "Dong Feng 5, China, 5mt",
+                                    "yield": 5000
+                                },
+                                {
+                                    "id": "tsar-bomba",
+                                    "text": "Tsar Bomba, USSR, 50mt",
+                                    "yield": 50000
+                                }
+                            ],
+                            "basemaps": [
+                                {
+                                    "name": "Topographic",
+                                    "basemap": "topo"
+                                },
+                                {
+                                    "name": "Satellite",
+                                    "basemap": "satellite"
+                                },
+                                {
+                                    "name": "Hybrid",
+                                    "basemap": "hybrid"
+                                },
+                                {
+                                    "name": "Delorme",
+                                    "basemap": "delorme"
+                                },
+                                {
+                                    "name": "Open Street Map",
+                                    "basemap": "osm"
+                                },
+                                {
+                                    "name": "Gray",
+                                    "basemap": "gray"
+                                },
+                                {
+                                    "name": "Street",
+                                    "basemap": "streets-navigation-vector"
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "path": "widgets/simpleInfoPane/infoPane",
+                        "node": "simpleInfoPane",
+                        "target": "sidePaneContent",
+                        "options": {
+                            "nodeId": "simpleInfoPane",
+                            "display": "none",
+                            "buttonIcon": "glyphicon-book",
+                            "title": "Information",
+                            "resourceUrl": "http://strategicatlas.eu/nuke/requestInfo"                            
+                        }
+                    }
+                ]
+            }
+        }]
+}

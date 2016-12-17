@@ -1,0 +1,18 @@
+<div id="nuke">
+    <select id="selector" name="selector" >        
+        
+    </select>
+    <button class="btn btn-primary btn-xs" data-dojo-attach-event="onclick: removeBomb">Clear</button>
+    <div id="radioGroundAirBurst">
+        <input type="radio" name="typeOfBurst" value="groundburst" id="radioGroundburst" checked>Ground burst
+        <input type="radio" name="typeOfBurst" value="airburst" id="radioAirburst">Air burst
+    </div>
+    <div id="airPressures">Maximize overpressure.<br>
+        <input class="maxOverpressure" type="radio" name="airpressure" value="5psi" checked>5psi
+        <input class="maxOverpressure" type="radio" name="airpressure" value="10psi">10psi
+        <input class="maxOverpressure" type="radio" name="airpressure" value="20psi">20psi
+    </div>
+    <div id="casualties">
+        <p>Casualties: <span id="totalCasualties"></span></p>
+    </div>
+</div>

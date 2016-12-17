@@ -1,0 +1,335 @@
+
+html, body { 
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+}
+
+#map-div {
+    
+    position: absolute;
+    padding: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+#map-wrapper {
+    
+}
+
+/***************
+*              *   
+***************/
+
+#pane {
+    
+    z-index: 50;
+    background-color: #fff;    
+    width: 400px;    
+    border-radius: 0px;    
+    
+    
+}
+
+#paneHeader {
+    background-color: black;
+    border-radius: 0px;
+    height: 60px;
+    color: white;
+    font-size: 20px;
+    padding: 4px;
+}
+
+
+
+#paneContent {
+    background-color: white;
+    
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+
+#paneFooter {
+    background-color: #DCD8D8;
+    font-size: 24px;
+    border-radius: 0px;
+    height: 60px;
+    width: 400px;
+    padding: 4px 0 0 4px;
+    position:absolute;
+    bottom: 5px;
+}
+
+.footerButtons {
+    display: inline-block;
+    border: 1px solid black;
+    margin: 0 4px 0 0;
+    cursor: pointer;
+    padding: 4px;
+    color: black;
+}
+
+
+.footerButtons:hover {    
+    border: 1px solid #D84204;
+}
+
+.selectedFooterButton {
+    color: #D84204;
+}
+
+.scrolls { 
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 80px;
+    white-space:nowrap;
+} 
+
+.panes {
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+/***********
+* legenda
+************/
+
+#legenda {
+    border-radius: 0 0 5px 5px;
+    margin: 10px;    
+    width: 380px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+
+
+#legenda td {
+    padding: 5px;
+    height: 30px;
+}
+
+.sp {
+    
+}
+
+#legenda div {
+    height: 40px;   
+
+    padding: 12px 10px 10px 10px;
+    background-color: white;
+
+}
+
+#legenda div:hover {
+    background-color: #DCD8D8;
+}
+
+#legenda div span {
+    margin: 0 0 0 10px;
+}
+
+#legenda div input {
+    margin: 0px 10px 0 0;
+}
+
+#legenda h3 {    
+    margin: 0 0 0 0;
+    text-align: center;
+}
+
+#legenda2 {
+    border-radius: 0 0 5px 5px;
+    margin: 10px;    
+    width: 380px;
+    overflow: auto;
+    overflow-x: hidden;
+}
+
+
+/***************
+*              *   
+***************/
+
+#pane-wrapper {
+    width: 400px;
+    
+    float: right;
+}
+
+#search {
+    position: absolute;
+    z-index: 2;
+    top: 5px;
+    right: 270px;
+}
+
+#locate {
+    position: absolute;
+    top: 95px;
+    left: 22px;
+    z-index: 50;
+}
+
+#edit {
+    position: absolute;
+    top: 20px;
+    left: 60px;
+    z-index: 50;
+
+}
+
+#info {
+    position: absolute;
+    left: 15px;
+    bottom: 5px;
+    color: #000;
+    z-index: 50;
+    background-color: #fff;
+}
+
+#layerss {
+    position: absolute;
+    top: 130px;
+    left: 22px;
+    width: 240px;
+    z-index: 50;
+    background-color: #fff;
+}
+
+#scale {
+    position: absolute;
+    bottom: 20px;
+    left: 22px;
+    width: 100px;   
+    z-index: 50;    
+    background-color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+#layers {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    z-index: 50;
+    background-color: #fff;    
+    width: 240px;
+    border-radius: 8px;
+    
+    margin: 0 5px 5px 0;
+}
+
+#layerheader  {
+    background-color: #9F9C9C;
+    font-size: 24px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#layerheader svg {
+    margin: 0 5px 0 5px;
+}
+
+#layerlist {
+    border-radius: 0 0 5px 5px;
+    margin: 0 0 10px 0;
+}
+
+#layerlist div {
+    height: 40px;   
+
+    padding: 12px 10px 10px 10px;
+    background-color: white;
+
+}
+
+#layerlist div:hover {
+    background-color: #DCD8D8;
+}
+
+#layerlist div span {
+    margin: 0 0 0 10px;
+}
+
+#layerlist div input {
+    margin: 0px 10px 0 0;
+}
+
+#layerlist h3 {    
+    margin: 0 0 0 0;
+    text-align: center;
+}
+
+#nuke {
+    position: absolute;
+    top: 21px;
+    left: 62px;
+    z-index: 50;
+    width: 192px;
+    height: 120px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+#nuke button {
+    margin: 0 6px 0 4px;
+}
+
+#airPressures {
+    margin: 0 0 0 6px;
+}
+
+#radioGroundAirBurst {
+    margin: 0 0 0 6px;
+}
+
+#casualties p {
+    margin: 0 0 0 6px;
+}
+
+#selector {
+    width : 130px;
+    margin: 6px 0 0 6px;
+}
+
+#bombkinfo {
+    width                 : 340px;
+    height                : 240px;
+
+}
+
+#radiicolor {
+    height                  : 40px;
+    width                   : 20px;
+    margin                  : 0 6px 0 0;
+}
+
+#radiusinfo {
+    height                  : 40px;
+    width                   : 230px; 
+}
+
+#bombinfo sup {
+    font-size               : 6px;
+}
+
+/*
+*
+* css startpage
+*/
+
+.wrapper {
+    padding: 40px;
+
+}
+
+.innerWrapper {
+
+}

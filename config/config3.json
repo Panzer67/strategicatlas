@@ -1,0 +1,90 @@
+{
+    "app": [{
+            "type": "map",
+            "path": "widgets/map/map",
+            "options": {
+                "id": "map-div",
+                "target": "map-wrapper",
+                "mapType": {
+                    "basemap": "topo"
+                },
+                "typeView": "sceneView",
+                "viewProps": {
+                    "center": [25.609, 56.285],
+                    "zoom": 4,
+                    "container": "map-div",
+                    "logo": false
+                },
+                "layers": [ 
+                    {
+                        "type": "geojsonPointLayer",
+                        "properties": {
+                            "url": "http://localhost/strategicatlas/geojson/russian-airdefense.json",
+                            "id": "russian-airdefense",
+                            "title": "Russian Air Defense",
+                            "visible": true
+                        }
+                    },
+                    {
+                        "type": "graphicsLayer",
+                        "properties": {
+                            "url": "http://localhost/strategicatlas/geojson/russian-airbases.geojson",
+                            "id": "russian-radars",
+                            "title": "Russian Radars",
+                            "visible": true
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "type": "pane",
+            "path": "widgets/pane/pane",
+            "node": "pane",
+            "target": "pane-wrapper",
+            "options": {
+                "widgets": [
+                    {
+                        "path": "widgets/legend/legend",
+                        "node": "legend",
+                        "target": "paneContent",
+                        "options": {
+                            "buttonIcon": "glyphicon-list",
+                            "title": "Legend",
+                            "nodeId": "legend",
+                            "display": "block",
+                            "titleLegend": "Legenda arcgis api 4",
+                            "basemapSwitcher": [
+                                {
+                                    "name": "Topographic",
+                                    "basemap": "topo"
+                                },
+                                {
+                                    "name": "Satellite",
+                                    "basemap": "satellite"
+                                }, 
+                                {
+                                    "name": "Hybrid",
+                                    "basemap": "hybrid"
+                                },   
+                                {
+                                    "name": "Open Street Map",
+                                    "basemap": "osm"
+                                },
+                                {
+                                    "name": "Gray",
+                                    "basemap": "gray"
+                                },
+                                {
+                                    "name": "Streets",
+                                    "basemap": "streets"
+                                }
+
+                            ]
+                        }
+                    }
+                ]
+            }
+        }    
+    ]
+}

@@ -1,0 +1,492 @@
+{
+    "app": [{
+            "type": "map",
+            "path": "widgets/map/map",
+            "options": {
+                "id": "map-div",
+                "mapOptions": {
+                    "center": [25.609, 56.285],
+                    "zoom": 6,
+                    "basemap": "topo",
+                    "logo": false,
+                    "slider": false
+
+                },
+                "basemaps": {
+                    "baseMapLayers": [{
+                            "url": "https://services.arcgisonline.com/ArcGIS/rest/services/Specialty/DeLorme_World_Base_Map/MapServer"
+                        }
+                    ],
+                    "thumbnailUrl": "https://www.example.com/images/thumbnail_2014-11-25_61051.png",
+                    "title": "Delorme"
+                },
+                "layers": [
+                    {
+                        "type": "geojsonPolygonLayer",
+                        "properties": {
+                            "url": "http://strategicatlas.eu/geojson/russia.geojson",
+                            "id": "russia",
+                            "className": "Russia",
+                            "symbol": {
+                                "fillColor": [255, 0, 0, 0.2],
+                                "lineColor": [0, 0, 0, 0.4]
+                            },
+                            "infoTemplate": false,
+                            "visible": false
+
+                        }
+                    },    
+                    {
+                        "type": "geojsonPolygonLayer",
+                        "properties": {
+                            "url": "http://strategicatlas.eu/geojson/nato-single.geojson",
+                            "id": "nato",
+                            "className": "NATO",
+                            "symbol": {
+                                "fillColor": [0, 40, 222, 0.2],
+                                "lineColor": [0, 0, 0, 0.4]
+                            },
+                            "infoTemplate": false,
+                            "visible": false
+
+                        }
+                    },
+                    {
+                        "type": "geojsonPolygonLayer",
+                        "properties": {
+                            "url": "http://strategicatlas.eu/geojson/disputed-areas-east-europe.geojson",
+                            "id": "disputed-areas",
+                            "className": "Disputed areas Eastern Europe",
+                            "symbol": {
+                                "fillColor": [236, 255, 0, 0.45],
+                                "lineColor": [255, 0, 0, 0.9]
+                            },
+                            "infoTemplate": true,
+                            "visible": true
+
+                        }
+                    },
+                    {
+                        "type": "geojsonPolygonLayer",
+                        "properties": {
+                            "url": "http://strategicatlas.eu/geojson/range-yakhont2.geojson",
+                            "id": "yakhont-kaliningrad",
+                            "className": "Bastion-P coastal defense max range Kaliningrad",
+                            "symbol": {
+                                "fillColor": [255, 0, 0, 0.2],
+                                "lineColor": [255, 0, 0, 0.4]
+                            },
+                            "infoTemplate": true,
+                            "visible": true
+
+                        }
+                    },
+                    {
+                        "type": "geojsonPolygonLayer",
+                        "properties": {
+                            "url": "http://strategicatlas.eu/geojson/suwalki-gap.geojson",
+                            "id": "suwalki-gap",
+                            "className": "The Suwalki Gap",
+                            "symbol": {
+                                "fillColor": [236, 255, 0, 0.4],
+                                "lineColor": [0, 0, 0, 0.4]
+                            },
+                            "infoTemplate": true,
+                            "visible": true
+
+                        }
+                    },
+                    {
+                        "type": "geojsonPointLayer",
+                        "properties": {
+                            "url": "http://strategicatlas.eu/geojson/russian-airdefense.geojson",
+                            "id": "russia-airdefense",
+                            "className": "Russian air defense systems",
+                            "symbol": {
+                                "url": "pictures/red/red_missile_airdefense.png",
+                                "height": 24,
+                                "width": 24
+                            },
+                            "infoTemplateTitle": "Russian air defense systems",
+                            "buffer": false,
+                            "visible": true
+                        }
+                    },
+                    {
+                        "type": "geojsonPointLayer",
+                        "properties": {
+                            "url": "http://strategicatlas.eu/geojson/russian-radars.geojson",
+                            "id": "russia-radars",
+                            "className": "Russian Radars",
+                            "symbol": {
+                                "url": "pictures/red/red_radar.png",
+                                "height": 24,
+                                "width": 24
+                            },
+                            "infoTemplateTitle": "Russian Radar Systems",
+                            "buffer": false,
+                            "visible": true
+                        }
+                    },
+                    {
+                        "type": "geojsonPointLayer",
+                        "properties": {
+                            "url": "http://strategicatlas.eu/geojson/russian-airbases.geojson",
+                            "id": "russia-airbases",
+                            "className": "Russian Airbases",
+                            "symbol": {
+                                "url": "pictures/red/red_airfield.png",
+                                "height": 24,
+                                "width": 24
+                            },
+                            "infoTemplateTitle": "Russian Airbases",
+                            "visible": true
+                        }
+                    },
+                    {
+                        "type": "geojsonPointLayer",
+                        "properties": {
+                            "url": "http://strategicatlas.eu/geojson/russian-navy-bases.json",
+                            "id": "russia-navy-bases",
+                            "className": "Russian Navy Bases",
+                            "symbol": {
+                                "url": "pictures/red/red_naval_base.png",
+                                "height": 24,
+                                "width": 24
+                            },
+                            "infoTemplateTitle": "Russian Navy Bases",
+                            "visible": true
+
+                        }
+                    },
+                    {
+                        "type": "geojsonPointLayer",
+                        "properties": {
+                            "url": "http://strategicatlas.eu/geojson/nato-airbases.geojson",
+                            "id": "nato-airbases",
+                            "className": "NATO Airbases",
+                            "symbol": {
+                                "url": "pictures/blue/blue_airfield.png",
+                                "height": 24,
+                                "width": 24
+                            },
+                            "infoTemplateTitle": "NATO Airbases",
+                            "visible": true
+                        }
+                    },
+                    {
+                        "type": "geojsonPointLayer",
+                        "properties": {
+                            "url": "http://strategicatlas.eu/geojson/neutral-airbases.geojson",
+                            "id": "neutral-airbases",
+                            "className": "Neutral Airbases",
+                            "symbol": {
+                                "url": "pictures/neutral/neutral_airfield.png",
+                                "height": 24,
+                                "width": 24
+                            },
+                            "infoTemplateTitle": "Neutral Airbases",
+                            "visible": true
+                        }
+                    } 
+                ]
+            }
+        },
+        {
+            "type": "pane",
+            "path": "widgets/sidePane/sidePane",
+            "node": "sidePane",
+            "options": {
+                "widgets": [
+                    {
+                        "path": "widgets/legend/legend",
+                        "node": "legend",
+                        "target": "sidePaneContent",
+                        "options": {
+                            "buttonIcon": "glyphicon-list",
+                            "title": "Legend",
+                            "nodeId": "legend",
+                            "display": "block",
+                            "titleLegend": "Baltic Strategic Theater",
+                            "layers": {
+                                "geojsonPointLayers": ["russia-airdefense", "russia-radars", "russia-airbases","russia-navy-bases", "nato-airbases","neutral-airbases"],
+                                "geojsonPolygonLayers": ["disputed-areas","yakhont-kaliningrad","suwalki-gap","nato","russia"]
+                            },
+                            "layerOrder": ["russia-airdefense", "russia-radars", "russia-airbases","russia-navy-bases","nato-airbases","neutral-airbases","yakhont-kaliningrad","suwalki-gap","nato","russia","disputed-areas"],
+                            "basemapSwitcher": [
+                                {
+                                    "name": "Topographic",
+                                    "basemap": "topo"
+                                },
+                                {
+                                    "name": "Satellite",
+                                    "basemap": "satellite"
+                                },
+                                {
+                                    "name": "Hybrid",
+                                    "basemap": "hybrid"
+                                },
+                                {
+                                    "name": "Delorme",
+                                    "basemap": "delorme"
+                                },
+                                {
+                                    "name": "Open Street Map",
+                                    "basemap": "osm"
+                                },
+                                {
+                                    "name": "Gray",
+                                    "basemap": "gray"
+                                }
+
+                            ]
+                        }
+                    },
+                    {
+                        "path": "widgets/armamentToolbox/armamentToolbox",
+                        "node": "armtoolbox",
+                        "target": "sidePaneContent",
+                        "options": {
+                            "nodeId": "armtoolbox",
+                            "display": "none",
+                            "buttonIcon": "glyphicon-screenshot",
+                            "title": "Armament",
+                            "bombs": [
+                                {
+                                    "id": "little-boy",
+                                    "text": "Little Boy, Hiroshima, 15kt",
+                                    "yield": 15
+                                },
+                                {
+                                    "id": "fat-man",
+                                    "text": "Fat Man, Nagasaki, 20kt",
+                                    "yield": 20
+                                },
+                                {
+                                    "id": "tn80/81",
+                                    "text": "TN80/81, French warhead, 300kt",
+                                    "yield": 300
+                                },
+                                {
+                                    "id": "b61",
+                                    "text": "B61, US tactical nuke, 340kt",
+                                    "yield": 340
+                                },
+                                {
+                                    "id": "ss-27",
+                                    "text": "SS-27 Topol M, Russian, 800kt",
+                                    "yield": 800
+                                },
+                                {
+                                    "id": "minuteman",
+                                    "text": "Minuteman (W-59), US, 1mt",
+                                    "yield": 1000
+                                },
+                                {
+                                    "id": "dong-feng-4",
+                                    "text": "Dong Feng 4, China, 3.3mt",
+                                    "yield": 3300
+                                },
+                                {
+                                    "id": "dong-feng-5",
+                                    "text": "Dong Feng 5, China, 5mt",
+                                    "yield": 5000
+                                },
+                                {
+                                    "id": "tsar-bomba",
+                                    "text": "Tsar Bomba, USSR, 50mt",
+                                    "yield": 50000
+                                }
+                            ],
+                            "blue": {
+                                "missiles": [
+                                    {
+                                        "id": "mgm-140",
+                                        "text": "MGM-140 ATACMS",
+                                        "range": 300,
+                                        "class": "surfToSurface",
+                                        "description": ""
+                                    }                                    
+                                ],
+                                "artillery": [
+                                    {
+                                        "id": "panzerhaubitze",
+                                        "text": "Panzerhaubitze 2000",
+                                        "range": 40,
+                                        "class": "mechArtillery",
+                                        "description": ""
+                                    },
+                                    {
+                                        "id": "m10946",
+                                        "text": "M109A6 Paladin",
+                                        "range": 30,
+                                        "class": "mechArtillery",
+                                        "description": ""
+                                    }                                    
+                                ],
+                                "airdefense": [
+                                    {
+                                        "id": "mim-104b",
+                                        "text": "MIM-104B Patriot (PAC-1)",
+                                        "range": 70,
+                                        "class": "airdefenseMissile",
+                                        "description": ""
+                                    },
+                                    {
+                                        "id": "mim-104c",
+                                        "text": "MIM-104C Patriot (PAC-2)",
+                                        "range": 160,
+                                        "class": "airdefenseMissile",
+                                        "description": ""
+                                    }
+                                ]
+                            },
+                            "red": {
+                                "missiles": [
+                                    {
+                                        "id": "iskander",
+                                        "text": "9K720 Iskander-M/SS-26",
+                                        "range": 500,
+                                        "class": "surfToSurface",
+                                        "description": ""
+                                    },
+                                    {
+                                        "id": "otr-21",
+                                        "text": "OTR-21 Tochka-U/SS-21",
+                                        "range": 120,
+                                        "class": "surfToSurface",
+                                        "description": ""
+                                    }
+                                ],
+                                "artillery": [
+                                    {
+                                        "id": "2s35",
+                                        "text": "2S35 Koalitsiya-SV",
+                                        "range": 40,
+                                        "class": "mechArtillery",
+                                        "description": ""
+                                    },
+                                    {
+                                        "id": "bm-21",
+                                        "text": "BM-21 GRAD",
+                                        "range": 40,
+                                        "class": "rockArtillery",
+                                        "description": ""
+                                    },
+                                    {
+                                        "id": "bm-30",
+                                        "text": "BM-30 Smerch",
+                                        "range": 90,
+                                        "class": "rockArtillery",
+                                        "description": ""
+                                    }
+                                ],
+                                "airdefense": [
+                                    {
+                                        "id": "s-300ps",
+                                        "text": "S-300PS",
+                                        "range": 90,
+                                        "class": "airdefenseMissile",
+                                        "description": ""
+                                    },
+                                    {
+                                        "id": "s-400",
+                                        "text": "S-400",
+                                        "range": 400,
+                                        "class": "airdefenseMissile",
+                                        "description": "S-400 airdefense system. "
+                                    }
+                                ]
+                            },
+                            "neutral": {
+                                "missiles": [
+                                    {
+                                        "id": "iskander",
+                                        "text": "9K720 Iskander-M/SS-26",
+                                        "range": 500,
+                                        "class": "surfToSurface",
+                                        "description": ""
+                                    },
+                                    {
+                                        "id": "otr-21",
+                                        "text": "OTR-21 Tochka-U/SS-21",
+                                        "range": 120,
+                                        "class": "surfToSurface",
+                                        "description": ""
+                                    }
+                                ],
+                                "artillery": [
+                                    {
+                                        "id": "2s35",
+                                        "text": "2S35 Koalitsiya-SV",
+                                        "range": 40,
+                                        "class": "mechArtillery",
+                                        "description": ""
+                                    },
+                                    {
+                                        "id": "bm-21",
+                                        "text": "BM-21 GRAD",
+                                        "range": 40,
+                                        "class": "rockArtillery",
+                                        "description": ""
+                                    },
+                                    {
+                                        "id": "bm-30",
+                                        "text": "BM-30 Smerch",
+                                        "range": 90,
+                                        "class": "rockArtillery",
+                                        "description": ""
+                                    }
+                                ],
+                                "airdefense": [
+                                    
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "path": "widgets/infoPane/infoPane",
+                        "node": "infoPane",
+                        "target": "sidePaneContent",
+                        "options": {
+                            "nodeId": "infoPane",
+                            "display": "none",
+                            "buttonIcon": "glyphicon-book",
+                            "title": "Information",
+                            "resourceUrl": "http://strategicatlas.eu/baltictheater/requestInfo",
+                            "resourceUrlAllTitles": "http://strategicatlas.eu/baltictheater/requestAllAvailableTitles"
+                        }
+                    },
+                    {
+                        "path": "widgets/query/query",
+                        "node": "query",
+                        "target": "sidePaneContent",
+                        "options": {
+                            "nodeId": "query",
+                            "display": "none",
+                            "buttonIcon": "glyphicon-search",
+                            "title": "Query",
+                            "layers": {
+                                "geojsonPointLayers": ["russia-airdefense", "russia-radars", "russia-airbases", "nato-airbases"]
+                            }
+                        }
+                    },
+                    {
+                        "path": "widgets/measurement/measurement",
+                        "node": "measurement",
+                        "target": "sidePaneContent",
+                        "options": {
+                            "nodeId": "measurement",
+                            "display": "none",
+                            "buttonIcon": "glyphicon-wrench",
+                            "title": "Measurement"
+                            
+                        }
+                    }
+
+                ]
+
+
+            }
+        }]
+}

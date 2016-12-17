@@ -1,0 +1,7 @@
+{
+"type": "FeatureCollection",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "id": 1, "title": "The Suwalki Gap", "infoTemplate": "The Suwalki Gap is a land corridor between Poland and Lithuania. It is the sole land route between the Baltic NATO countries and the rest of NATO. Due to this reason control of this narrow piece of land would be of great strategic value during a possible military confrontation." }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 22.662845550568033, 54.356541321490511 ], [ 22.676146173613716, 54.359428772558793 ], [ 22.689186000129094, 54.360340557050662 ], [ 22.709788926023393, 54.361556238226719 ], [ 22.722828752538767, 54.360644480717504 ], [ 22.785159123282277, 54.363683593716829 ], [ 22.792200629600579, 54.363531643969161 ], [ 22.789331867767196, 54.368697647590984 ], [ 22.769306004741146, 54.38390939388529 ], [ 22.735832765141989, 54.442564864373502 ], [ 22.972347499554296, 54.554855467700051 ], [ 23.909413560071588, 54.036610021435173 ], [ 23.712902578821993, 53.93319665732934 ], [ 23.597654548309855, 53.932562338472728 ], [ 23.517925316151299, 53.955905460004878 ], [ 23.513160886586572, 53.90914050247283 ], [ 23.526994853742174, 53.863779949576738 ], [ 22.662845550568033, 54.356541321490511 ] ] ] } }
+]
+}
