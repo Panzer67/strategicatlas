@@ -69,35 +69,97 @@ define([
         },
         getInfo: function (selectedSystem) {
             var template = "";
-            console.log(selectedSystem);
+
             template += selectedSystem.type + "</br>";
             template += "<table border=0>";
-            template += "<tr><th colspan=3>Weapon(s)</th></tr>";
-            
+            template += "<tr><th colspan=2 style=text-align:center;>Weapon(s)</th></tr>";
+
             for (var i = 0; i < selectedSystem.weapons.length; i++) {
                 var weapon = selectedSystem.weapons[i];
-                var keys = Object.keys(weapon);
-                var values = Object.values(weapon);
-                for (var j = 0; j < keys.length; j++) {
+                weapon = this.reorderObject(weapon, "weaponType");
+                
+                for (var j = 0; j < weapon.length; j++) {
                     template += "<tr>";
-                    if (keys[j] !== "weaponType") {
-                        
-                        template += "<td>" + this.capitalize(keys[j]) + ": </td>";
-                        template += "<td>"+ values[j] + "</td>";
+                    if (weapon[j].key !== "weaponType") {
+
+                        template += "<td>" + this.capitalize(weapon[j].key) + ": </td>";
+                        template += "<td>" + this.formalizer(weapon[j]) + "</td>";
                     }
-                    if(keys[j] === "weaponType") {
-                        template += "<td>Color: " + "</td>";
-                        template += "<td>" + this.symbolRenderer(values[j]) + "</td>";
+                    if (weapon[j].key === "weaponType") {
+                        template += "<td colspan=2>" + this.getWeaponTypeName(weapon[j].value) + "</td></tr>";                        
+                        template += "<td>Color: </td>";
+                        template += "<td>" + this.symbolRenderer(weapon[j].value) + "</td>";
                     }
                     template += "</tr>";
                 }
             }
             template += "</table>";
-            
+
             return template;
         },
+        getWeaponTypeName: function(weaponType) {
+            switch (weaponType) {
+                case "surfaceToAirMissile":
+                    return "Surface-to-air missile";
+                case "radar":
+                    return "Radar";
+                case "surfaceToSurfaceBallisticMissile":
+                    return "Ballistic missile";
+                case "rocket":
+                    return "Rocket";
+                case "howitzer":
+                    return "Howitzer";
+                case "antiShipCruiseMissile":
+                    return "Anti-ship cruise missile";
+            }
+        },  
+        formalizer: function(obj) {
+            var value = "";
+            switch(obj.key) {
+                case "range":
+                    value = obj.value + "km";
+                    break;
+                case "altitude":
+                    value = obj.value + "km";
+                    break;
+                default:
+                    value = obj.value;
+            }
+            
+            return value;
+        },
         capitalize: function (s) {
+            if(s === "rateOfFire") {
+                s = "Rate of fire";
+            }
+            
             return s[0].toUpperCase() + s.slice(1);
+        },
+        reorderObject: function (obj, keyName) {
+            var arr = [];
+
+            for (var prop in obj) {
+                if (obj.hasOwnProperty(prop)) {
+                    arr.push({
+                        'key': prop,
+                        'value': obj[prop]
+                    });
+                }
+            }
+            function isThisOrThat(element) {                
+                return element.key === keyName;                
+            }
+            
+            var index = arr.findIndex(isThisOrThat);
+            arr = this.arraymove(arr, index, 0);
+
+            return arr; 
+        },
+        arraymove: function (arr, fromIndex, toIndex) {
+            var element = arr[fromIndex];
+            arr.splice(fromIndex, 1);
+            arr.splice(toIndex, 0, element);
+            return arr;
         }
     };
 });

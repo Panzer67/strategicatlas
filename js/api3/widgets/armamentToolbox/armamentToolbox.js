@@ -1,8 +1,11 @@
 
 define([
+    'constants/constants',    
     'widgets/general/generalFunctions',
     './nukeCalculator',
     './helperFunctions',
+    './weaponsystems',
+    'esri/request', 
     'esri/layers/GraphicsLayer',
     'esri/geometry/Circle',
     'esri/geometry/Point',
@@ -37,7 +40,7 @@ define([
     'dijit/_WidgetBase',
     'dijit/_TemplatedMixin',
     'dojo/text!widgets/armamentToolbox/armamentToolbox.html'
-], function (generalFunctions, NukeCalculator, helperFunctions, GraphicsLayer, Circle, Point, geometryEngine, Units, Graphic,
+], function (constants, generalFunctions, NukeCalculator, helperFunctions, weaponSystems, esriRequest, GraphicsLayer, Circle, Point, geometryEngine, Units, Graphic,
         graphicsUtils, Geoprocessor, FeatureSet, SimpleFillSymbol, SimpleMarkerSymbol, SimpleLineSymbol, PictureMarkerSymbol,
         InfoTemplate, Color, Edit, declare, dom, domAttr, domStyle, domConstruct, domClass, Toggler, lang, on, query, string, number,
         Deferred, Menu, MenuItem, _WidgetBase, _TemplatedMixin, template) {
@@ -49,6 +52,7 @@ define([
             this.options = options;
             this.typeOfFaction = "red";
             this.editToolbarActive = false;
+            this.weaponSystems = weaponSystems.getWeaponSystems();
         },
         postCreate: function () {
             var self = this;
@@ -93,8 +97,9 @@ define([
             });
             lang.mixin(this, {togglerAirPressures: togglerAirPressures});
             this.togglerAirPressures.hide();
-            dom.byId("selector").innerHTML = this.selectTemplate(this.options.bombs);
-            this.setSelectors(this.options, this.typeOfFaction);
+            dom.byId("selector").innerHTML = this.selectTemplate(this.options.bombs);  
+                        
+            this.setSelectors(this.weaponSystems);            
 
             this.own(on(query(".buttonWeaponsSwitcher"), "click", function (e) {
                 query(".weaponsPanel").style("display", "none");
@@ -112,29 +117,36 @@ define([
             this.own(on(query(".typeOfWeaponSwitcher"), "click", function (e) {
                 if (e.target.value === "missiles") {
                     domAttr.remove("selectorMissiles", "disabled");
+                    domAttr.set("selectorAntiship", "disabled", "disabled");
                     domAttr.set("selectorArtillery", "disabled", "disabled");
                     domAttr.set("selectorAirdefense", "disabled", "disabled");
-                } else if (e.target.value === "artillery") {
+                } else if (e.target.value === "antiship") {
+                    domAttr.remove("selectorAntiship", "disabled");
+                    domAttr.set("selectorMissiles", "disabled", "disabled");
+                    domAttr.set("selectorArtillery", "disabled", "disabled");
+                    domAttr.set("selectorAirdefense", "disabled", "disabled");
+                }                
+                else if (e.target.value === "artillery") {
                     domAttr.remove("selectorArtillery", "disabled");
                     domAttr.set("selectorMissiles", "disabled", "disabled");
+                    domAttr.set("selectorAntiship", "disabled", "disabled");
                     domAttr.set("selectorAirdefense", "disabled", "disabled");
                 } else if (e.target.value === "airdefense") {
                     domAttr.remove("selectorAirdefense", "disabled");
                     domAttr.set("selectorMissiles", "disabled", "disabled");
+                    domAttr.set("selectorAntiship", "disabled", "disabled");
                     domAttr.set("selectorArtillery", "disabled", "disabled");
                 }
             }));
 
             this.own(on(query(".factionButtons"), "click", function (e) {
-                self.typeOfFaction = e.target.value;
-                self.setSelectors(self.options, self.typeOfFaction);
+                self.typeOfFaction = e.target.value;                
                 self.setClassFactionButtons(self.typeOfFaction);
-
             }));
 
             this.createMenuForWeapon();
 
-
+            domAttr.set("selectorAntiship", "disabled", "disabled");
             domAttr.set("selectorArtillery", "disabled", "disabled");
             domAttr.set("selectorAirdefense", "disabled", "disabled");
         },
@@ -158,18 +170,16 @@ define([
             this.map.on("dbl-click", lang.hitch(this, 'kaBoom'));
             this.map.on("click", function () {
                 self.editToolbar.deactivate();
-
             });
 
-        },
+        },        
         placeNuke: function (e) {
             var features = [];
             var circle = [];
             var yield = NukeCalculator.getYield("selector");
             var bombName = NukeCalculator.getBombName("selector");
             var maxOverpressure = (this.typeOfExplosion === "airburst") ? NukeCalculator.getMaxOverpressure(".maxOverpressure:checked") : null;
-            var bomb = NukeCalculator.getBurstInfo(bombName, yield, this.typeOfExplosion, maxOverpressure);
-            console.log(this.glNuclear);
+            var bomb = NukeCalculator.getBurstInfo(bombName, yield, this.typeOfExplosion, maxOverpressure);            
             var graphic = null;
             var infoTemplate = NukeCalculator.getIntoTemplateContent(bomb);
             if (this.glNuclear.graphics.length !== 60) {
@@ -225,7 +235,7 @@ define([
             var weaponsCategory = query('input[type=radio][name=typeOfweaponSystem]:checked')[0].value;
 
             var selectedSystemId = helperFunctions.getSelectedWeaponId(weaponsCategory);
-            var selectedSystem = helperFunctions.getWeapon(this.options, this.typeOfFaction, weaponsCategory, selectedSystemId);
+            var selectedSystem = helperFunctions.getWeapon(this.weaponSystems, weaponsCategory, selectedSystemId);
 
             var point = new Point(e.mapPoint);
 
@@ -238,7 +248,6 @@ define([
 
             var description = generalFunctions.getInfo(selectedSystem);
             var infoTemplate = new InfoTemplate(helperFunctions.capitalize(weaponsCategory), description);
-
 
             weaponPoint.setInfoTemplate(infoTemplate);
 
@@ -272,45 +281,33 @@ define([
                 dom.byId("totalCasualties").innerHTML = "";
             }
         },
-        setSelectors: function (options, typeOfFaction) {
-            var factionWeapons = options[typeOfFaction];
-
-            if (!factionWeapons.hasOwnProperty("missiles") || factionWeapons.missiles.length === 0) {
-                domStyle.set(dom.byId("missilesDiv"), {
-                    display: 'none'
-                });
-            } else {
-                domStyle.set(dom.byId("missilesDiv"), {
+        setSelectors: function (weaponSystems) {            
+            
+            domStyle.set(dom.byId("missilesDiv"), {
                     display: 'block'
                 });
-                dom.byId("selectorMissiles").innerHTML = this.selectTemplate(factionWeapons.missiles);
-            }
-            if (!factionWeapons.hasOwnProperty("artillery") || factionWeapons.missiles.length === 0) {
-                domStyle.set(dom.byId("artilleryDiv"), {
-                    display: 'none'
-                });
-            } else {
-                domStyle.set(dom.byId("artilleryDiv"), {
+            dom.byId("selectorMissiles").innerHTML = this.selectTemplate(weaponSystems.missiles);
+            
+            domStyle.set(dom.byId("antishipDiv"), {
                     display: 'block'
                 });
-                dom.byId("selectorArtillery").innerHTML = this.selectTemplate(factionWeapons.artillery);
-            }
-            if (!factionWeapons.hasOwnProperty("airdefense") || factionWeapons.airdefense.length === 0) {
-                domStyle.set(dom.byId("airdefenseDiv"), {
-                    display: 'none'
-                });
-            } else {
-                domStyle.set(dom.byId("airdefenseDiv"), {
+            dom.byId("selectorAntiship").innerHTML = this.selectTemplate(weaponSystems.antiship);
+            
+            domStyle.set(dom.byId("artilleryDiv"), {
                     display: 'block'
                 });
-                dom.byId("selectorAirdefense").innerHTML = this.selectTemplate(factionWeapons.airdefense);
-            }
+            dom.byId("selectorArtillery").innerHTML = this.selectTemplate(weaponSystems.artillery);
+            
+            domStyle.set(dom.byId("airdefenseDiv"), {
+                    display: 'block'
+                });
+            dom.byId("selectorAirdefense").innerHTML = this.selectTemplate(weaponSystems.airdefense);            
         },
         selectTemplate: function (arr) {
             var selectOptions = "";
             for (var i = 0; i < arr.length; i++) {
                 selectOptions += "<option id=" + arr[i].id + " value=" + ((arr[i].hasOwnProperty("yield")) ? arr[i].yield : "") + ">";
-                selectOptions += arr[i].type + "</option>";
+                selectOptions += arr[i].type + " (" + arr[i].countryOrigin + ")</option>";
             }
 
             return selectOptions;
@@ -362,8 +359,6 @@ define([
                             self.glWeaponRangeToolbx.add(weaponBuffer);
                         }
                         selectedGraphic.rangeVisible = true;
-
-
                     } else {
                         for (var i = 0; i < attributes.weapons.length; i++) {
                             var graphic = generalFunctions.selectGraphicFromBufferPointsLayer(self.glWeaponRangeToolbx, selectedGraphic.geometry);

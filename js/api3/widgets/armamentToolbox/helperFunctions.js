@@ -12,10 +12,10 @@ define([
             switch (typeOfWeapon) {
                 case "missiles":
                     return "selectorMissiles";
-
+                case "antiship":
+                    return "selectorAntiship";
                 case "artillery":
                     return "selectorArtillery";
-
                 case "airdefense":
                     return "selectorAirdefense";
             }
@@ -36,13 +36,43 @@ define([
             var weaponTypeUrlString = this.getTypeOfWeaponString(weaponsCategory, selectedSystem.systemType);
             return new PictureMarkerSymbol({
                 url: "pictures/" + typeOfFaction + "/" + typeOfFaction + weaponTypeUrlString,
-                width: ((typeOfFaction === "blue") ? 30 : 30),
-                height: ((typeOfFaction === "blue") ? 22 : 30)
+                width: this.getSize(typeOfFaction, "width"),
+                height: this.getSize(typeOfFaction, "height")
             });
+        },
+        getSize: function(typeOfFaction, widthHeight) {
+            if(typeOfFaction === "blue") {
+                if(widthHeight === "width") {
+                    return 30;
+                }
+                else {
+                    return 22;
+                }
+            }
+            if(typeOfFaction === "red") {
+                if(widthHeight === "width") {
+                    return 30;
+                }
+                else {
+                    return 30;
+                }
+            }
+            if(typeOfFaction === "neutral") {
+                if(widthHeight === "width") {
+                    return 28;
+                }
+                else {
+                    return 28;
+                }
+            }
         },
         getTypeOfWeaponString: function (weaponsCategory, systemType) {
             switch (weaponsCategory) {
                 case "missiles":
+                    if (systemType === "surfaceToSurfaceMissile") {
+                        return "_surface_to_surface_missile.png";
+                    }
+                case "antiship":
                     if (systemType === "surfaceToSurfaceMissile") {
                         return "_surface_to_surface_missile.png";
                     }
@@ -59,9 +89,9 @@ define([
                     }
             }
         },
-        getWeapon: function (options, typeOfFaction, weaponsCategory, selectedSystemId) {
+        getWeapon: function (weaponSystems, weaponsCategory, selectedSystemId) {
             var system = {};
-            var arr = options[typeOfFaction][weaponsCategory];
+            var arr = weaponSystems[weaponsCategory];
 
             for (var i = 0; i < arr.length; i++) {
                 if (arr[i].id === selectedSystemId) {

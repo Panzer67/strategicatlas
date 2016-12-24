@@ -60,10 +60,13 @@ define([
                         var pointGraphic = new Graphic(point, generalFunctions.getPictureMarkerSymbol(this.options.symbol));
 
                         if (this.options.infoTemplateTitle) {
-                            pointGraphic.setInfoTemplate(this.createInfoTemplate(this.options.infoTemplateTitle, feature.properties));
-
+                            if(feature.properties.weapons) {
+                                var description = generalFunctions.getInfo(feature.properties);
+                                pointGraphic.setInfoTemplate(new InfoTemplate(this.options.infoTemplateTitle, description));    
+                            } else {
+                                pointGraphic.setInfoTemplate(this.createInfoTemplate(this.options.infoTemplateTitle, feature.properties));
+                            } 
                         }
-                        
                         pointGraphic.setAttributes(feature.properties);
                         this.add(pointGraphic);
                         
