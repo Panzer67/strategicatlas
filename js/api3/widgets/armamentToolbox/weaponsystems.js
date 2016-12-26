@@ -333,6 +333,32 @@ define(['dojo/dom'], function (dom) {
                         "countryOrigin": "USA",
                         "description": "Mainly designed to be used against ballistic missiles."
                     }
+                ],
+                "naval": [
+                    {
+                        "id": "buyan",
+                        "type": "Buyan class corvette",
+                        "weapons": [
+                            {
+                                "missile": "P-800 Oniks/Yakhont",
+                                "range": 300,
+                                "speed": "Mach 2.5",
+                                "warhead": "250kg",
+                                "weaponType": "antiShipCruiseMissile"
+                            },
+                            {
+                                "missile": "9K38 Igla",
+                                "range": 5.2,
+                                "altitude": 3.5,
+                                "warhead": "1.17kg",
+                                "guidance": "infra-red",
+                                "weaponType": "surfaceToAirMissile"
+                            }
+                        ],                      
+                        "systemType": "frigate",
+                        "countryOrigin": "Russia",
+                        "description": ""
+                    }
                 ]
             };
             return weaponSystems;

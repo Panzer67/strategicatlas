@@ -120,22 +120,35 @@ define([
                     domAttr.set("selectorAntiship", "disabled", "disabled");
                     domAttr.set("selectorArtillery", "disabled", "disabled");
                     domAttr.set("selectorAirdefense", "disabled", "disabled");
-                } else if (e.target.value === "antiship") {
+                    domAttr.set("selectorNaval", "disabled", "disabled");
+                } 
+                else if (e.target.value === "antiship") {
                     domAttr.remove("selectorAntiship", "disabled");
                     domAttr.set("selectorMissiles", "disabled", "disabled");
                     domAttr.set("selectorArtillery", "disabled", "disabled");
                     domAttr.set("selectorAirdefense", "disabled", "disabled");
+                    domAttr.set("selectorNaval", "disabled", "disabled");
                 }                
                 else if (e.target.value === "artillery") {
                     domAttr.remove("selectorArtillery", "disabled");
                     domAttr.set("selectorMissiles", "disabled", "disabled");
                     domAttr.set("selectorAntiship", "disabled", "disabled");
                     domAttr.set("selectorAirdefense", "disabled", "disabled");
-                } else if (e.target.value === "airdefense") {
+                    domAttr.set("selectorNaval", "disabled", "disabled");
+                } 
+                else if (e.target.value === "airdefense") {
                     domAttr.remove("selectorAirdefense", "disabled");
                     domAttr.set("selectorMissiles", "disabled", "disabled");
                     domAttr.set("selectorAntiship", "disabled", "disabled");
                     domAttr.set("selectorArtillery", "disabled", "disabled");
+                    domAttr.set("selectorNaval", "disabled", "disabled");
+                } 
+                else if (e.target.value === "naval") {
+                    domAttr.remove("selectorNaval", "disabled");
+                    domAttr.set("selectorMissiles", "disabled", "disabled");
+                    domAttr.set("selectorAntiship", "disabled", "disabled");
+                    domAttr.set("selectorArtillery", "disabled", "disabled");
+                    domAttr.set("selectorAirdefense", "disabled", "disabled");
                 }
             }));
 
@@ -149,6 +162,7 @@ define([
             domAttr.set("selectorAntiship", "disabled", "disabled");
             domAttr.set("selectorArtillery", "disabled", "disabled");
             domAttr.set("selectorAirdefense", "disabled", "disabled");
+            domAttr.set("selectorNaval", "disabled", "disabled");
         },
         startup: function () {
             var self = this;
@@ -301,7 +315,11 @@ define([
             domStyle.set(dom.byId("airdefenseDiv"), {
                     display: 'block'
                 });
-            dom.byId("selectorAirdefense").innerHTML = this.selectTemplate(weaponSystems.airdefense);            
+            dom.byId("selectorAirdefense").innerHTML = this.selectTemplate(weaponSystems.airdefense);  
+            domStyle.set(dom.byId("navalDiv"), {
+                    display: 'block'
+                });
+            dom.byId("selectorNaval").innerHTML = this.selectTemplate(weaponSystems.naval);            
         },
         selectTemplate: function (arr) {
             var selectOptions = "";

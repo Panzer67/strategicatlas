@@ -18,6 +18,8 @@ define([
                     return "selectorArtillery";
                 case "airdefense":
                     return "selectorAirdefense";
+                case "naval":
+                    return "selectorNaval";
             }
         },
         getSelectedValue: function (typeOfWeapon) {
@@ -36,32 +38,37 @@ define([
             var weaponTypeUrlString = this.getTypeOfWeaponString(weaponsCategory, selectedSystem.systemType);
             return new PictureMarkerSymbol({
                 url: "pictures/" + typeOfFaction + "/" + typeOfFaction + weaponTypeUrlString,
-                width: this.getSize(typeOfFaction, "width"),
-                height: this.getSize(typeOfFaction, "height")
+                width: this.getSize(typeOfFaction, selectedSystem.systemType, "width"),
+                height: this.getSize(typeOfFaction, selectedSystem.systemType, "height")
             });
         },
-        getSize: function(typeOfFaction, widthHeight) {
-            if(typeOfFaction === "blue") {
-                if(widthHeight === "width") {
-                    return 30;
-                }
-                else {
-                    return 22;
+        getSize: function (typeOfFaction, systemType, widthHeight) {
+            if (typeOfFaction === "blue") {
+                if (systemType === "frigate") {
+                    if (widthHeight === "width") {
+                        return 30;
+                    } else {
+                        return 30;
+                    }
+                } else {
+                    if (widthHeight === "width") {
+                        return 30;
+                    } else {
+                        return 22;
+                    }
                 }
             }
-            if(typeOfFaction === "red") {
-                if(widthHeight === "width") {
+            if (typeOfFaction === "red") {
+                if (widthHeight === "width") {
                     return 30;
-                }
-                else {
+                } else {
                     return 30;
                 }
             }
-            if(typeOfFaction === "neutral") {
-                if(widthHeight === "width") {
+            if (typeOfFaction === "neutral") {
+                if (widthHeight === "width") {
                     return 28;
-                }
-                else {
+                } else {
                     return 28;
                 }
             }
@@ -87,6 +94,10 @@ define([
                     if (systemType === "airdefenseMissile") {
                         return "_airdefense_missile.png";
                     }
+                case "naval":
+                    if (systemType === "frigate") {
+                        return "_frigate.png";
+                    }
             }
         },
         getWeapon: function (weaponSystems, weaponsCategory, selectedSystemId) {
@@ -107,7 +118,7 @@ define([
             template += selectedSystem.type + "</br>";
             template += "<table border=1>";
             template += "<tr><th colspan=3>Weapon(s)</th></tr>";
-            
+
             for (var i = 0; i < selectedSystem.weapons.length; i++) {
                 var weapon = selectedSystem.weapons[i];
                 var keys = Object.keys(weapon);
@@ -115,11 +126,11 @@ define([
                 for (var j = 0; j < keys.length; j++) {
                     template += "<tr>";
                     if (keys[j] !== "weaponType") {
-                        
-                        template += "<td>" +keys[j] + ": </td>";
-                        template += "<td>"+ values[j] + "</td>";
+
+                        template += "<td>" + keys[j] + ": </td>";
+                        template += "<td>" + values[j] + "</td>";
                     }
-                    if(keys[j] === "weaponType") {
+                    if (keys[j] === "weaponType") {
                         template += "<td>Color: " + "</td>";
                         template += "<tr>" + values[j] + "</td>";
                     }
@@ -127,7 +138,7 @@ define([
                 }
             }
             template += "</table>";
-            
+
             return template;
         },
         capitalize: function (s) {
