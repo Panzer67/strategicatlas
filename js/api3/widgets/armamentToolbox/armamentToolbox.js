@@ -203,7 +203,7 @@ define([
                         center: e.mapPoint,
                         radius: bomb.radii[i].radius,
                         radiusUnit: Units.METERS,
-                        geodesic: true
+                        geodesic: false
                     });
                     if (i === 0) {
                         graphic = new Graphic(circle[i], NukeCalculator.getThermalSymbol());

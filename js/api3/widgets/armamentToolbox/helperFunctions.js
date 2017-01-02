@@ -38,13 +38,13 @@ define([
             var weaponTypeUrlString = this.getTypeOfWeaponString(weaponsCategory, selectedSystem.systemType);
             return new PictureMarkerSymbol({
                 url: "pictures/" + typeOfFaction + "/" + typeOfFaction + weaponTypeUrlString,
-                width: this.getSize(typeOfFaction, selectedSystem.systemType, "width"),
-                height: this.getSize(typeOfFaction, selectedSystem.systemType, "height")
+                width: this.getSize(typeOfFaction, weaponsCategory, selectedSystem.systemType, "width"),
+                height: this.getSize(typeOfFaction, weaponsCategory, selectedSystem.systemType, "height")
             });
         },
-        getSize: function (typeOfFaction, systemType, widthHeight) {
+        getSize: function (typeOfFaction, weaponsCategory, systemType, widthHeight) {
             if (typeOfFaction === "blue") {
-                if (systemType === "frigate") {
+                if (weaponsCategory === "naval") {
                     if (widthHeight === "width") {
                         return 30;
                     } else {
@@ -59,10 +59,26 @@ define([
                 }
             }
             if (typeOfFaction === "red") {
-                if (widthHeight === "width") {
-                    return 30;
+                if (weaponsCategory === "naval") {
+                    if (systemType === "submarine") {
+                        if (widthHeight === "width") {
+                            return 22;
+                        } else {
+                            return 30;
+                        }
+                    } else {
+                        if (widthHeight === "width") {
+                            return 30;
+                        } else {
+                            return 30;
+                        }
+                    }
                 } else {
-                    return 30;
+                    if (widthHeight === "width") {
+                        return 30;
+                    } else {
+                        return 30;
+                    }
                 }
             }
             if (typeOfFaction === "neutral") {
@@ -95,9 +111,22 @@ define([
                         return "_airdefense_missile.png";
                     }
                 case "naval":
+                    if (systemType === "battlecruiser") {
+                        return "_battleship.png";
+                    }
+                    if (systemType === "cruiser") {
+                        return "_cruiser.png";
+                    }
+                    if (systemType === "destroyer") {
+                        return "_destroyer.png";
+                    }
                     if (systemType === "frigate") {
                         return "_frigate.png";
                     }
+                    if (systemType === "submarine") {
+                        return "_submarine.png";
+                    }
+
             }
         },
         getWeapon: function (weaponSystems, weaponsCategory, selectedSystemId) {

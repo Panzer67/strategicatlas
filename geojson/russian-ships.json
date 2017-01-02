@@ -15,7 +15,7 @@
             },
             "properties": {
                 "id": "buyan",
-                "type": "Zelenyy Dol (Buyan class corvette)",
+                "type": "Zelenyy Dol (Buyan-m class corvette)",
                 "weapons": [
                     {
                         "missile": "P-800 Oniks/Yakhont",

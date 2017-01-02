@@ -5,6 +5,60 @@ define(['dojo/dom'], function (dom) {
             var weaponSystems = {
                 "missiles": [
                     {
+                        "id": "topol",
+                        "type": "RT-2PM Topol (SS-25 Sickle)",
+                        "weapons": [
+                            {
+                                "weaponType": "surfaceToSurfaceBallisticMissile",
+                                "missile": "RT-2PM",
+                                "range": 10000,
+                                "speed": "Mach 21",
+                                "guidance": "inertial/GLONASS",
+                                "warhead": "800kt",
+                                "precision": "CEP 200m"
+                            }
+                        ],
+                        "systemType": "surfaceToSurfaceMissile",
+                        "countryOrigin": "Russia",
+                        "description": ""
+                    },
+                    {
+                        "id": "topol-m",
+                        "type": "RT-2PM2 Topol-m (SS-27 Sickle B)",
+                        "weapons": [
+                            {
+                                "weaponType": "surfaceToSurfaceBallisticMissile",
+                                "missile": "RT-2PM2",
+                                "range": 11000,
+                                "speed": "Mach 22",
+                                "guidance": "inertial/GLONASS",
+                                "warhead": "800kt",
+                                "precision": "CEP 200m"
+                            }
+                        ],
+                        "systemType": "surfaceToSurfaceMissile",
+                        "countryOrigin": "Russia",
+                        "description": ""
+                    },
+                    {
+                        "id": "RS-24",
+                        "type": "RS-24 Yars (SS-29)",
+                        "weapons": [
+                            {
+                                "weaponType": "surfaceToSurfaceBallisticMissile",
+                                "missile": "RS-24",
+                                "range": 11000,
+                                "speed": "Mach 20",
+                                "guidance": "inertial/GLONASS",
+                                "warhead": "4x 250kt",
+                                "precision": "CEP 150-250m"
+                            }
+                        ],
+                        "systemType": "surfaceToSurfaceMissile",
+                        "countryOrigin": "Russia",
+                        "description": ""
+                    },                    
+                    {
                         "id": "iskander",
                         "type": "9K720 Iskander-M (SS-26 Stone)",
                         "weapons": [
@@ -13,6 +67,7 @@ define(['dojo/dom'], function (dom) {
                                 "missile": "9M723K1",
                                 "range": 500,
                                 "speed": "Mach 6.2",
+                                "warhead": "700kg",
                                 "precision": "CEP 5-7m"
                             }
                         ],
@@ -53,14 +108,62 @@ define(['dojo/dom'], function (dom) {
                         "description": ""
                     },
                     {
-                        "id": "scarabC",
-                        "type": "OTR-21 Tochka-U (SS-21 Scarab C)",
+                        "id": "scudA",
+                        "type": "R-11 Zemlya (SS-1B Scud-A)",
                         "weapons": [
                             {
-                                "missile": "Scarab C",
-                                "range": 185,
-                                "speed": "Mach 5.3",
-                                "precision": "CEP 70m",
+                                "missile": "R-11 Zemlya",
+                                "range": 180,
+                                "payload": "950kg",
+                                "precision": "CEP 3km",
+                                "weaponType": "surfaceToSurfaceBallisticMissile"
+                            }
+                        ],
+                        "systemType": "surfaceToSurfaceMissile",
+                        "countryOrigin": "Soviet/Russia",
+                        "description": ""
+                    },
+                    {
+                        "id": "scudB",
+                        "type": "R-17 Elbrus (SS-1C Scud-B)",
+                        "weapons": [
+                            {
+                                "missile": "R-17 Elbrus",
+                                "range": 300,
+                                "payload": "985kg",
+                                "precision": "CEP 450m",
+                                "weaponType": "surfaceToSurfaceBallisticMissile"
+                            }
+                        ],
+                        "systemType": "surfaceToSurfaceMissile",
+                        "countryOrigin": "Soviet/Russia",
+                        "description": ""
+                    },
+                    {
+                        "id": "scudC",
+                        "type": "R-17 (SS-1d Scud-C)",
+                        "weapons": [
+                            {
+                                "missile": "R-17",
+                                "range": 600,
+                                "payload": "600kg",
+                                "precision": "CEP 700m",
+                                "weaponType": "surfaceToSurfaceBallisticMissile"
+                            }
+                        ],
+                        "systemType": "surfaceToSurfaceMissile",
+                        "countryOrigin": "Soviet/Russia",
+                        "description": ""
+                    },
+                    {
+                        "id": "scudD",
+                        "type": "R-17 (SS-1e Scud-D)",
+                        "weapons": [
+                            {
+                                "missile": "R-17",
+                                "range": 700,
+                                "payload": "985kg",
+                                "precision": "CEP 50m",
                                 "weaponType": "surfaceToSurfaceBallisticMissile"
                             }
                         ],
@@ -68,6 +171,7 @@ define(['dojo/dom'], function (dom) {
                         "countryOrigin": "Soviet/Russia",
                         "description": ""
                     }
+                    
                 ],
                 "antiship": [
                     {
@@ -87,8 +191,25 @@ define(['dojo/dom'], function (dom) {
                         "description": ""
                     },
                     {
+                        "id": "bal-e",
+                        "type": "Bal-E (SS-C-6 Sennight)",
+                        "weapons": [
+                            {
+                                "missile": "Kh-35",
+                                "range": 260,
+                                "speed": "Mach 0.8",
+                                "warhead": "650kg",
+                                "guidance": "inertial,satellite",
+                                "weaponType": "antiShipCruiseMissile"
+                            }
+                        ],
+                        "systemType": "surfaceToSurfaceMissile",
+                        "countryOrigin": "Russia",
+                        "description": ""
+                    },
+                    {
                         "id": "kustrobotbatteri90",
-                        "type": "Kusttobotbatteri 90",
+                        "type": "Kustrobotbatteri 90",
                         "weapons": [
                             {
                                 "missile": "RBS-15",
@@ -336,8 +457,149 @@ define(['dojo/dom'], function (dom) {
                 ],
                 "naval": [
                     {
+                        "id": "kirov",
+                        "type": "Kirov class battlecruiser",
+                        "weapons": [
+                            {
+                                "missile": "P-700 Granit (20x)",
+                                "range": 625,
+                                "speed": "Mach 2.5",
+                                "warhead": "500kt or 750kg",
+                                "weaponType": "antiShipCruiseMissile"                                
+                            },
+                            {
+                                "missile": "S-300FM (96x)",
+                                "range": 150,
+                                "altitude": 27,
+                                "warhead": "150kg",
+                                "guidance": "TVM",
+                                "weaponType": "surfaceToAirMissile"
+                            },                            
+                            {
+                                "gun": "twin AK-130",
+                                "rateOfFire": "10-40 rounds/min",
+                                "caliber": "130mm",
+                                "range": 23,
+                                "weaponType": "howitzer"
+                            },
+                            {
+                                "missile": "OSA-M (40x)",
+                                "range": 15,
+                                "altitude": 5,
+                                "warhead": "40kg",
+                                "guidance": "RF CLOS",
+                                "weaponType": "surfaceToAirMissile"
+                            },
+                            {
+                                "missile": "9K95 Tor (128x)",
+                                "range": 12,
+                                "altitude": 6,
+                                "warhead": "15kg",
+                                "guidance": "radio",
+                                "weaponType": "surfaceToAirMissile"
+                            }
+                        ],                      
+                        "systemType": "battlecruiser",
+                        "countryOrigin": "Soviet/Russia",                        
+                        "description": "Displacement: 24.300ton<br>Length: 252m<br>Propulsion: nuclear<br>Speed: 32 knots (59km/h)"
+                    },
+                    {
+                        "id": "slava",
+                        "type": "Slava class cruiser",
+                        "weapons": [
+                            {
+                                "missile": "P-500 Bazalt (16x)",
+                                "range": 500,
+                                "speed": "Mach 2.5",
+                                "warhead": "350kt or 950kg",
+                                "weaponType": "antiShipCruiseMissile"                                
+                            },
+                            {
+                                "missile": "S-300F (64x)",
+                                "range": 90,
+                                "altitude": 25,
+                                "warhead": "133kg",
+                                "guidance": "SARH",
+                                "weaponType": "surfaceToAirMissile"
+                            },
+                            {
+                                "gun": "twin AK-130",
+                                "rateOfFire": "10-40 rounds/min",
+                                "caliber": "130mm",
+                                "range": 23,
+                                "weaponType": "howitzer"
+                            },
+                            {
+                                "missile": "OSA-M (40x)",
+                                "range": 15,
+                                "altitude": 5,
+                                "warhead": "40kg",
+                                "guidance": "RF CLOS",
+                                "weaponType": "surfaceToAirMissile"
+                            }
+                        ],                      
+                        "systemType": "cruiser",
+                        "countryOrigin": "Soviet/Russia",
+                        "description": "Displacement: 11.200ton<br>Length: 186m<br>Propulsion: gas turbine<br>Speed: 32 knots (59km/h)"
+                    },
+                    {
+                        "id": "sovremennyy",
+                        "type": "Sovremennyy class destroyer",
+                        "weapons": [
+                            {
+                                "missile": "Moskit (SS-N-22) (8x)",
+                                "range": 250,
+                                "speed": "Mach 3",
+                                "warhead": "320kg",
+                                "weaponType": "antiShipCruiseMissile"
+                            },
+                            {
+                                "missile": "3S90M Shtil-1 (BUK 9M317) (48x)",
+                                "range": 50,
+                                "altitude": 25,
+                                "warhead": "70kg",
+                                "guidance": "SARH",
+                                "weaponType": "surfaceToAirMissile"                            
+                            },
+                            {
+                                "gun": "twin AK-130",
+                                "rateOfFire": "10-40 rounds/min",
+                                "caliber": "130mm",
+                                "range": 23,
+                                "weaponType": "howitzer"
+                            }
+                        ],                      
+                        "systemType": "destroyer",
+                        "countryOrigin": "Soviet/Russia",
+                        "description": ""
+                    },
+                    {
                         "id": "buyan",
-                        "type": "Buyan class corvette",
+                        "type": "Buyan-m class corvette",
+                        "weapons": [
+                            {
+                                "missile": "P-800 Oniks/Yakhont (8x)",
+                                "range": 300,
+                                "speed": "Mach 2.5",
+                                "warhead": "250kg",
+                                "weaponType": "antiShipCruiseMissile"
+                            },
+                            {
+                                "missile": "9K38 Igla (8x)",
+                                "range": 5.2,
+                                "altitude": 3.5,
+                                "warhead": "1.17kg",
+                                "guidance": "infra-red",
+                                "weaponType": "surfaceToAirMissile"
+                            }
+                        ],                      
+                        "systemType": "frigate",
+                        "countryOrigin": "Russia",
+                        "description": ""
+                    },
+                    {
+                        "id": "grigorovich",
+                        "type": "Admiral Grigorovich class frigate",
                         "weapons": [
                             {
                                 "missile": "P-800 Oniks/Yakhont",
@@ -347,12 +609,20 @@ define(['dojo/dom'], function (dom) {
                                 "weaponType": "antiShipCruiseMissile"
                             },
                             {
-                                "missile": "9K38 Igla",
-                                "range": 5.2,
-                                "altitude": 3.5,
-                                "warhead": "1.17kg",
-                                "guidance": "infra-red",
-                                "weaponType": "surfaceToAirMissile"
+                                "missile": "Kalibr 3M-14T",
+                                "range": 2500,
+                                "warhead": "450kg", 
+                                "speed": "Mach 0.8-2.9",
+                                "guidance": "inertial/satellite/radar",
+                                "weaponType": "surfaceToSurfaceCruiseMissile"
+                            },
+                            {
+                                "missile": "3S90M Shtil-1 (BUK 9M317) (24x)",
+                                "range": 50,
+                                "altitude": 25,
+                                "warhead": "70kg",
+                                "guidance": "SARH",
+                                "weaponType": "surfaceToAirMissile"                            
                             }
                         ],                      
                         "systemType": "frigate",

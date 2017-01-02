@@ -2,6 +2,7 @@ define([
     "widgets/general/generalFunctions",
     "constants/constants",    
     "dojo/_base/declare",
+    "dojo/Evented",
     "esri/graphic",
     "esri/layers/GraphicsLayer",
     "esri/InfoTemplate",       
@@ -11,10 +12,10 @@ define([
     "esri/geometry/Point",    
     "dojo/_base/lang"
 ], function (
-        generalFunctions, constants, declare, Graphic, GraphicsLayer, InfoTemplate,
+        generalFunctions, constants, declare, Evented, Graphic, GraphicsLayer, InfoTemplate,
          SimpleRenderer, SpatialReference, esriRequest, Point, lang
         ) {
-    return declare([GraphicsLayer], {
+    return declare([GraphicsLayer, Evented], {
         constructor: function (options) {
 
             this.options = options;
@@ -74,6 +75,7 @@ define([
                     }
                 }                
             }
+            this.emit("layer-ready", this);
         },
         _errorGetJsonXhr: function (e) {
             console.error("StrategicPointLayer Error: Couldn't load JSON. Check url. File must be on the same domain or server must be CORS enabled.\n\n" + e);

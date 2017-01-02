@@ -388,6 +388,71 @@
                 "template": "Belaya airbase. 6953th aviation base.",
                 "runwayLength": 4000
             }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [33.419441,69.032814]
+            },
+            "properties": {
+                "city": "Severomorsk",
+                "type": "Severomorsk-1 airbase",                  
+                "template": "Severomorsk-1 airbase. Naval airbase.",
+                "runwayLength": 3000
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [33.721106,68.866338]
+            },
+            "properties": {
+                "city": "Severomorsk",
+                "type": "Severomorsk-3 airbase",                  
+                "template": "Severomorsk-3 airbase. Naval airbase.",
+                "runwayLength": 2500
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [35.948911,35.400942]
+            },
+            "properties": {
+                "city": "Jablah (Syria)",
+                "type": "Humaymim airbase",                  
+                "template": "Humaymim  airbase. Syrian airbase used by Russian armed forces.",
+                "runwayLength": 2500
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [44.470226,40.127971]
+            },
+            "properties": {
+                "city": "Yerevan (Armenia)",
+                "type": "Erebuni airbase",                  
+                "template": "Erebuni airbase. Armenian airbase used by Russian Air Force, hosts a squadron of MIG-29s and Mi24 attack helicopters.",
+                "runwayLength": 2650
+            }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [158.453642,53.169617]
+            },
+            "properties": {
+                "city": "Petropavlovsk-Kamchatsky",
+                "type": "Petropavlovsk-Kamchatsky airbase",                  
+                "template": "Petropavlovsk-Kamchatsky naval airbase. Hostst i.e. Mig-31",
+                "runwayLength": 3400
+            }
         }
        
     ]

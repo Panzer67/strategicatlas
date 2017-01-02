@@ -24,7 +24,7 @@
                     {
                         "type": "geojsonPolygonLayer",
                         "properties": {
-                            "path": "geojson/russia.geojson",
+                            "path": "geojson/russia50m.geojson",
                             "id": "russia",
                             "className": "Russia",
                             "symbol": {
@@ -233,10 +233,10 @@
                             "display": "block",
                             "titleLegend": "Baltic Strategic Theater",
                             "layers": {
-                                "geojsonPointLayers": ["russia-airdefense", "russia-surface-to-surface", "russia-radars", "russia-airbases", "russia-navy-bases", "nato-airbases", "neutral-airbases"],
+                                "geojsonPointLayers": ["russia-airdefense", "russia-surface-to-surface","russia-ships", "russia-radars", "russia-airbases", "russia-navy-bases", "nato-airbases", "neutral-airbases"],
                                 "geojsonPolygonLayers": ["disputed-areas", "suwalki-gap", "nato", "russia"]
                             },
-                            "layerOrder": ["russia-airdefense", "russia-surface-to-surface", "russia-radars", "russia-airbases", "russia-navy-bases", "nato-airbases", "neutral-airbases", "suwalki-gap", "nato", "russia", "disputed-areas"],
+                            "layerOrder": ["russia-airdefense", "russia-surface-to-surface", "russia-ships", "russia-radars", "russia-airbases", "russia-navy-bases", "nato-airbases", "neutral-airbases", "suwalki-gap", "nato", "russia", "disputed-areas"],
                             "basemapSwitcher": [
                                 {
                                     "name": "Topographic",

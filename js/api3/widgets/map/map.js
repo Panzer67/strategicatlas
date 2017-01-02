@@ -100,15 +100,8 @@ define([
             for (var i = 0; i < this.options.layers.length; i++) {
                 var fl = this._createLayer(this.options.layers[i]);
                 layers.push(fl);
-
-                //this.map.addLayer(fl);
-
             }
-            console.log(layers);
             this.map.addLayers(layers);
-
-
-
         },
         _mapCreated: function (response) {
             var self = this;
@@ -146,8 +139,11 @@ define([
                     var geojsonPointLayer = new GeojsonPointLayer(layer.properties);
                     if (layer.properties.hasOwnProperty("rangeVisible") && layer.properties.rangeVisible) {
                         this.createMenuForPoint(geojsonPointLayer);
-
+                        on(geojsonPointLayer, "layer-ready", function (layer) {
+                           // self.createBuffers(layer.graphics);
+                        });
                     }
+
                     return geojsonPointLayer;
 
                 case "geojsonLayer":
@@ -193,6 +189,22 @@ define([
         showCoordinates: function (e) {
             var mp = geometry.webMercatorUtils.webMercatorToGeographic(e.mapPoint);
             dom.byId("coordinates").innerHTML = mp.x.toFixed(6) + " " + mp.y.toFixed(6);
+        },
+        createBuffers: function (graphics) {
+            console.log(graphics);
+            for (var i = 0; i < graphics.length; i++) {
+                var graphic = graphics[i];
+                var point = graphic.geometry;
+                var parentCoordinates = generalFunctions.getCoordinates(graphic.geometry);
+                for (var j = 0; j < graphic.attributes.weapons.length; j++) {
+
+                    var bufferedGeometry = geometryEngine.geodesicBuffer(point, [graphic.attributes.weapons[j].range], 9036, false);
+                    var buffer = new Graphic(bufferedGeometry, generalFunctions.getFillSymbol(graphic.attributes.faction, graphic.attributes.weapons[j].weaponType));
+                    buffer.setAttributes({parentCoordinates: parentCoordinates});
+                    this.glBufferPoints.add(buffer);
+                }
+                graphic.rangeVisible = true;
+            }
         },
         createMenuForPoint: function (layer) {
             var self = this;
@@ -251,7 +263,7 @@ define([
                 menu.unBindDomNode(e.graphic.getDojoShape().getNode());
             });
         }
-        
+
     });
 
 

@@ -156,6 +156,18 @@
                 "type": "Kamchatka Rybachiy naval base",                  
                 "template": "Kamchatka Rybachiy naval base. Russian Pacific Sea fleet."
             }
+        },
+        {
+            "type": "Feature",
+            "geometry": {
+                "type": "Point",
+                "coordinates": [35.868916,34.912805]
+            },
+            "properties": {
+                "city": "Tartus (Syria)",
+                "type": "Tartus naval base",                  
+                "template": "Tartus naval base. Joint Syrian-Russian naval facility."
+            }
         }       
         
     ]

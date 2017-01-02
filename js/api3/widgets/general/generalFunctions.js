@@ -15,6 +15,8 @@ define([
                     return [138, 138, 135, 0.25];
                 case "surfaceToSurfaceBallisticMissile":
                     return [157, 59, 202, 0.25];
+                case "surfaceToSurfaceCruiseMissile":
+                    return [157, 59, 202, 0.25];
                 case "rocket":
                     return [157, 59, 202, 0.25];
                 case "howitzer":
@@ -105,6 +107,8 @@ define([
                     return "Radar";
                 case "surfaceToSurfaceBallisticMissile":
                     return "Ballistic missile";
+                case "surfaceToSurfaceCruiseMissile":
+                    return "Cruise missile";
                 case "rocket":
                     return "Rocket";
                 case "howitzer":
